@@ -9,16 +9,16 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint './src/**/*.{js,jsx}'",
-    "lint:fix": "eslint './src/**/*.{js,jsx}' --fix"
+    "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
+    "lint": "eslint src/ --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QuartoProject/frontend.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Migue Martelo <miguemartelo1031@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/QuartoProject/frontend/issues"
   },
@@ -35,8 +35,10 @@
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
+    "eslint-plugin-jest": "^23.17.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.2",
     "file-loader": "^6.0.0",
