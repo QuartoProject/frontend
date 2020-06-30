@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
 describe('Test Jest config', () => {
@@ -8,9 +8,5 @@ describe('Test Jest config', () => {
     const { getByText } = render(<App title={title} />);
 
     expect(getByText('Hello React')).toBeTruthy();
-  });
-
-  test('Alt in img', () => {
-    expect(screen.findAllByAltText('logo React')).toBeTruthy();
   });
 });
