@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './styles.scss';
+import Home from './pages/Home/index';
 
-const App = ({ title }) => {
-  return <div>{title}</div>;
+const App = () => {
+  return <Home />;
 };
 
 export default App;
