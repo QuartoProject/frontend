@@ -2,6 +2,8 @@ import React from 'react';
 
 import './style.scss';
 
+import Footer from '../../components/Footer';
+
 const Home = () => {
   return (
     <>
@@ -17,9 +19,7 @@ const Home = () => {
         <div className="home__carrousel">
           <h1>Reemplazar este div por el carrousel</h1>
         </div>
-        <footer className="home__footer">
-          <h1>Reemplazar este div por el footer</h1>
-        </footer>
+        <Footer />
       </main>
     </>
   );
