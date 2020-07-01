@@ -1,12 +1,12 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 
-import './style.scss'
+import './style.scss';
 
 const Home = () => {
   return (
     <>
       <main className="home">
+        <div className="home__transition"></div>
         <div className="home__navbar">
           <h1>Reemplazar este div por el navbar</h1>
         </div>

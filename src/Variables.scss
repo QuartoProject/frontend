@@ -1,3 +1,6 @@
+// assets
+// bogotá: https://i.imgur.com/5J3Qqiq.jpg
+
 //  colores
 $color-primary: #74b3ce;
 $color-secondary: #172a3a;
@@ -31,6 +34,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: $font-brand;
- /*  background-image: url(./assets/bogota.jpg);
-  background-repeat: no-repeat; */
+  background-image: url("https://i.imgur.com/5J3Qqiq.jpg");
+  background-repeat: no-repeat;
+  color: $color-white-text;
 }

@@ -1,5 +1,11 @@
 @import '../../Variables.scss';
 
+.home__transition {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0,0,0,0.65) 11%, rgba(0,0,0,0) 100%);
+}
+
 .home {
   display: grid;
   grid-template-columns: 3% 1.7fr 1fr 3%;
@@ -10,7 +16,6 @@
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     align-self: center;
-    color: $color-secondary;
     h1 {
       margin-left: -1%;
       font-weight: bold;
