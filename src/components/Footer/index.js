@@ -10,8 +10,7 @@ const Footer = () => (
   <footer className="home__footer">
     <div className="footer__menu">
       <ul>
-        <li>2020 Quarto</li>
-        <li>All rights reserved</li>
+        <li>&copy; 2020 Quarto. All rights reserved</li>
         <li>Privacidad</li>
         <li>Terminos y condiciones</li>
       </ul>
