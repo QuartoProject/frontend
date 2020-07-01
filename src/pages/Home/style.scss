@@ -1,0 +1,44 @@
+@import '../../Variables.scss';
+
+.home {
+  display: grid;
+  grid-template-columns: 3% 1.7fr 1fr 3%;
+  grid-template-rows: 2% 4% 8% 1fr 5% 9%;
+  width: 100vw;
+  height: 100vh;
+  &__title {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    align-self: center;
+    color: $color-secondary;
+    h1 {
+      margin-left: -1%;
+      font-weight: bold;
+      font-size: $big-title;
+    }
+    p {
+      margin-bottom: -20px;
+      font-size: $headline-2;
+    }
+  }
+}
+
+.home__navbar {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  justify-self: center;
+}
+
+.home__carrousel {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+.home__footer {
+  grid-column: 2 / 4;
+  grid-row: 6 / 7;
+  align-self: center;
+  justify-self: center;
+}

@@ -1,0 +1,36 @@
+//  colores
+$color-primary: #74b3ce;
+$color-secondary: #172a3a;
+
+$color-gray-text: #6e7f86;
+$color-white-text: white;
+
+// fonst
+$font-brand: 'Roboto', sans-serif;
+
+// font-size
+$big-title: 144px;
+$headline-1: 20px;
+$headline-2: 18px;
+$body-1: 16px;
+$body-2: 14px;
+$small: 12px;
+
+// space
+$space-1: 3%;
+$space-2: 2%;
+
+// generales
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: $font-brand;
+ /*  background-image: url(./assets/bogota.jpg);
+  background-repeat: no-repeat; */
+}
