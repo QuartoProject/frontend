@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Room from '../../components/Room';
 import Navbar from '../../components/Navbar';
 
 import './style.scss';
@@ -10,13 +11,16 @@ const Home = () => {
       <main className="home">
         <div className="home__transition"></div>
         <Navbar className="home__navbar" />
-        <div className="home__title">
+        <section className="home__title">
           <p>Busca tu rommie perfecto en</p>
           <h1>Bogotá</h1>
-        </div>
-        <div className="home__carrousel">
-          <h1>Reemplazar este div por el carrousel</h1>
-        </div>
+        </section>
+        <div className="carrousel__background"></div>
+        <section className="home__carrousel">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((id) => (
+            <Room key={id} />
+          ))}
+        </section>
         <footer className="home__footer">
           <h1>Reemplazar este div por el footer</h1>
         </footer>
