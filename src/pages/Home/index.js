@@ -5,6 +5,8 @@ import Navbar from '../../components/Navbar';
 
 import './style.scss';
 
+import Footer from '../../components/Footer';
+
 const Home = () => {
   return (
     <>
@@ -21,9 +23,7 @@ const Home = () => {
             <Room key={id} />
           ))}
         </section>
-        <footer className="home__footer">
-          <h1>Reemplazar este div por el footer</h1>
-        </footer>
+        <Footer />
       </main>
     </>
   );
