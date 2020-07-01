@@ -1,0 +1,79 @@
+@import '../../Variables.scss';
+
+.card {
+  position: relative;
+  z-index: 1;
+  // top: $space-1;
+  // left: $space-1;
+  display: flex;
+  width: 85%;
+  height: 29%;
+  margin: 3% 0 0 3%;
+  border-radius: 22px;
+  background-color: $color-white-text;
+  color: $color-secondary;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 54.5%;
+  height: auto;
+  &--apartment {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &--icon {
+    position: absolute;
+    top: 7%;
+    left: $space-2;
+  }
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45.5%;
+}
+
+.profile {
+  padding: 4% 0 0 4%;
+  h1 {
+    margin-bottom: $space-3;
+    font-size: $headline-1;
+  }
+}
+
+.profile__detail {
+  display: flex;
+  align-items: center;
+  &--photo {
+    width: 22px;
+    height: 22px;
+    margin-right: $space-3;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.priceAndButtom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4% 4% 4%;
+  &__buttom {
+    width: 79px;
+    height: 23px;
+    border-radius: 25px;
+    font-size: $small;
+    background-color: $color-secondary;
+    color: $color-white-text;
+    outline: none;
+    border: none;
+  }
+}
