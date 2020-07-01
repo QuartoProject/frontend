@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 
 import Navbar from '../../components/Navbar';
@@ -9,7 +8,8 @@ const Home = () => {
   return (
     <>
       <main className="home">
-        <Navbar />
+        <div className="home__transition"></div>
+        <Navbar className="home__navbar" />
         <div className="home__title">
           <p>Busca tu rommie perfecto en</p>
           <h1>Bogotá</h1>

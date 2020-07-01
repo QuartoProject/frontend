@@ -10,7 +10,6 @@
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     align-self: center;
-    color: $color-secondary;
     h1 {
       margin-left: -1%;
       font-weight: bold;
@@ -26,7 +25,6 @@
 .home__navbar {
   grid-column: 2 / 4;
   grid-row: 2 / 3;
-  justify-self: center;
 }
 
 .home__carrousel {

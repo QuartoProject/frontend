@@ -2,6 +2,7 @@ import React from 'react';
 
 // import Search from '../Search'
 
+import Logo from '../../assets/images/logoQuarto.svg';
 import './styles.scss';
 
 const Navbar = () => {
@@ -9,11 +10,7 @@ const Navbar = () => {
     <header className="home__navbar">
       <nav className="navbar">
         <figure className="navbar__imgContainer">
-          <img
-            src="../../assets/isotipoBlueMain.svg"
-            alt="Logo-Quarto"
-            className="navbar__img"
-          ></img>
+          <img src={Logo} alt="Logo-Quarto" className="navbar__img"></img>
         </figure>
         {/* <Search /> */}
         <div className="navbar__search">Buscador</div>

@@ -1,14 +1,16 @@
+@import '../../Variables.scss';
+
 .navbar {
   display: grid;
   background-color: transparent;
   grid-template-columns: repeat(3, 1fr);
   height: 50px;
-  color: red;
+  color: $color-white-text;
 }
 
 .navbar__imgContainer {
-  width: 10px;
-  height: 10px;
+  width: 34px;
+  height: 34px;
 }
 
 .navbar__navList {
