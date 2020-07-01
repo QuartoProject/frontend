@@ -16,11 +16,11 @@ const Home = () => {
           <p>Busca tu rommie perfecto en</p>
           <h1>Bogotá</h1>
         </section>
+        <div className="carrousel__background"></div>
         <section className="home__carrousel">
-          {[1, 2, 3].map((id) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((id) => (
             <Room key={id} />
           ))}
-          <div className="home__carrousel--background"></div>
         </section>
         <footer className="home__footer">
           <h1>Reemplazar este div por el footer</h1>
