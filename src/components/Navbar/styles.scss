@@ -4,7 +4,7 @@
   display: grid;
   background-color: transparent;
   grid-template-columns: repeat(3, 1fr);
-  height: 50px;
+  height: 40px;
   color: $color-white-text;
 }
 
@@ -20,12 +20,20 @@
   margin: 0px;
   padding: 0px;
   justify-content: flex-end;
+  line-height: 2;
 }
 
 .navbar__navList li {
   display: block;
   text-align: center;
-  padding: 10px 10px;
+  padding: 3px 10px;
+}
+
+.navbar__navList li:last-child {
+  background-color: $color-primary;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
 }
 
 .navbar__navList li:hover {
