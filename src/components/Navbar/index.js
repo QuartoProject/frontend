@@ -6,7 +6,7 @@ import './styles.scss';
 
 const Navbar = () => {
   return (
-    <header>
+    <header className="home__navbar">
       <nav className="navbar">
         <figure className="navbar__imgContainer">
           <img
@@ -20,7 +20,7 @@ const Navbar = () => {
         <ul className="navbar__navList">
           <li>Favoritos</li>
           <li>Iniciar Sesión</li>
-          <button>Registrarse</button>
+          <li>Registrarse</li>
         </ul>
       </nav>
     </header>

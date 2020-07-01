@@ -1,0 +1,31 @@
+.navbar {
+  display: grid;
+  background-color: transparent;
+  grid-template-columns: repeat(3, 1fr);
+  height: 50px;
+  color: red;
+}
+
+.navbar__imgContainer {
+  width: 10px;
+  height: 10px;
+}
+
+.navbar__navList {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  justify-content: flex-end;
+}
+
+.navbar__navList li {
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.navbar__navList li:hover {
+  cursor: pointer;
+}

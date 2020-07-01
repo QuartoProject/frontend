@@ -1,15 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 
+import Navbar from '../../components/Navbar';
+
 import './style.scss';
 
 const Home = () => {
   return (
     <>
       <main className="home">
-        <div className="home__navbar">
-          <h1>Reemplazar este div por el navbar</h1>
-        </div>
+        <Navbar />
         <div className="home__title">
           <p>Busca tu rommie perfecto en</p>
           <h1>Bogotá</h1>
