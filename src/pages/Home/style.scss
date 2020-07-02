@@ -88,13 +88,13 @@
 
 // media-queries
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .home__transition {
     background-image: linear-gradient(
-      180deg,
-      #000000 0%,
-      rgba(95, 95, 95, 0.52) 30%,
-      rgba(196, 196, 196, 0) 100%
+    180deg,
+    #000000 0%,
+    rgba(95, 95, 95, 0.52) 30%,
+    rgba(196, 196, 196, 0) 100%
   );
 }
   .home {
@@ -115,11 +115,11 @@
     h1 {
       margin-left: -1%;
       font-weight: bold;
-      font-size: $medium-title;
+      font-size: $tablet-title;
     }
     p {
       margin-bottom: -10px;
-      font-size: $small;
+      font-size: $body-2;
     }
   }
   .carrousel__background {
@@ -130,7 +130,7 @@
   }
   .ListOfRooms {
     display: block;
-    margin-top: -60%;
+    margin-top: -40%;
     background-color: white;
     border-radius: 22px;
   }
@@ -148,5 +148,19 @@
     align-items: center;
     width: 50%;
     margin: 10% auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home__title {
+    h1 {
+      font-size: $medium-title;
+    }
+    p {
+      font-size: $small;
+    }
+  }
+  .ListOfRooms {
+    margin-top: -60%;
   }
 }

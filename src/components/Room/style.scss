@@ -73,12 +73,28 @@
 
 // media queries
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .card {
     width: 95%;
+    height: 10%;
     left: 1.8%;
     margin-bottom: 5%;
     box-shadow: 5px 0 10px rgba(0,0,0,0.25);
+  }
+  .profile h1 {
+    font-size: $small-title;
+  }
+  .profile__detail--name {
+    font-size: $body-1;
+  }
+  .priceAndButtom {
+    font-size: $headline-1;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .profile h1 {
+    font-size: $headline-2;
   }
   .profile__detail--name {
     font-size: $body-2;
