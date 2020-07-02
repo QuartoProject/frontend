@@ -69,11 +69,6 @@
     opacity: 0.65;
 }
 
-// .home__room {
-//   grid-column: 3 / 4;
-//   grid-row: 4 / 5;
-// }
-
 .home__footer {
   grid-column: 2 / 4;
   grid-row: 6 / 7;
@@ -87,9 +82,13 @@
   display: none;
 }
 
+.loadMore {
+  display: none;
+}
+
 // media-queries
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .home__transition {
     background-image: linear-gradient(
       180deg,
@@ -131,7 +130,7 @@
   }
   .ListOfRooms {
     display: block;
-    margin: -60% 0 30% 0;
+    margin-top: -60%;
     background-color: white;
     border-radius: 22px;
   }
@@ -140,7 +139,14 @@
   }
   .footer__mobile {
     display: block;
-    // height: 10%;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+  }
+  .loadMore {
+    @include boton_detail;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 10% auto;
   }
 }

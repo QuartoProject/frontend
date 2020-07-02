@@ -41,3 +41,15 @@ body {
   background-size: cover;
   color: $color-white-text;
 }
+
+@mixin boton_detail {
+  width: 79px;
+  height: 23px;
+  border-radius: 25px;
+  font-size: $small;
+  background-color: $color-secondary;
+  color: $color-white-text;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

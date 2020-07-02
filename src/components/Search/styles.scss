@@ -25,3 +25,12 @@
   z-index: 999999;
   border-left: 1px solid $color-secondary;
 }
+
+// media queries
+
+@media screen and (max-width: 425px) {
+  .search_box {
+    width: 90%;
+    justify-self: center;
+  }
+}

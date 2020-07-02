@@ -44,7 +44,9 @@
   display: none;
 }
 
-@media screen and (max-width: 375px) {
+//media queries
+
+@media screen and (max-width: 425px) {
   .navbar {
     grid-template-columns: 30px 1fr 30px;
   }
