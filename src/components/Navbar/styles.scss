@@ -39,30 +39,3 @@
 .navbar__navList li:hover {
   cursor: pointer;
 }
-
-.navbar__hamburguerMenu {
-  display: none;
-}
-
-@media screen and (max-width: 375px) {
-  .navbar {
-    grid-template-columns: 30px 1fr 30px;
-  }
-  .navbar__imgContainer {
-    width: 30px;
-    height: 30px;
-  }
-  .navbar__navList {
-    display: none;
-  }
-  .navbar__search {
-    text-align: center;
-  }
-  .navbar__hamburguerMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-}

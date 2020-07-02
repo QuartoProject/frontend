@@ -23,7 +23,7 @@ const Room = () => {
             <div className="profile__detail--photo">
               <img src={MarioPhoto} alt="Profile photo" />
             </div>
-            <p className="profile__detail--name">Name Lastname</p>
+            <p>Name</p>
           </div>
         </div>
         <div className="priceAndButtom">

@@ -3,7 +3,6 @@ import React from 'react';
 // import Search from '../Search'
 
 import Logo from '../../assets/images/logoQuarto.svg';
-import HamburguerMenu from '../../assets/images/menu-hamburguer.svg';
 import './styles.scss';
 
 const Navbar = () => {
@@ -20,11 +19,6 @@ const Navbar = () => {
           <li>Iniciar Sesión</li>
           <li>Registrarse</li>
         </ul>
-        <img
-          className="navbar__hamburguerMenu"
-          src={HamburguerMenu}
-          alt="Hamburguer menu"
-        />
       </nav>
     </header>
   );

@@ -81,26 +81,3 @@
     cursor: pointer;
   }
 }
-
-// media queries
-
-@media screen and (max-width:375px) {
-  .card {
-    width: 100%;
-    left: 0;
-    margin-bottom: 5%;
-    box-shadow: 5px 0 10px rgba(0,0,0,0.25);
-  }
-  .profile__detail--name {
-    font-size: $body-2;
-  }
-  .card__image {
-    width: 47%;
-  }
-  .card__description {
-    width: 53%;
-  }
-  .priceAndButtom {
-    font-size: $body-2;
-  }
-}
