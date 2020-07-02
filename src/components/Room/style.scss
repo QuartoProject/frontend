@@ -6,11 +6,8 @@
   top: $space-1;
   left: $space-1;
   display: flex;
-  // width: 607px;
-  // height: 208px;
   width: 85%;
   height: 29%;
-  // margin: 3% 0 0 3%;
   margin-bottom: 3%;
   border-radius: 22px;
   background-color: $color-white-text;
@@ -70,26 +67,34 @@
   justify-content: space-between;
   padding: 0 4% 4% 4%;
   &__buttom {
-    width: 79px;
-    height: 23px;
-    border-radius: 25px;
-    font-size: $small;
-    background-color: $color-secondary;
-    color: $color-white-text;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    @include boton_detail;
   }
 }
 
 // media queries
 
-@media screen and (max-width:375px) {
+@media screen and (max-width: 768px) {
   .card {
-    width: 100%;
-    left: 0;
+    width: 95%;
+    height: 10%;
+    left: 1.8%;
     margin-bottom: 5%;
     box-shadow: 5px 0 10px rgba(0,0,0,0.25);
+  }
+  .profile h1 {
+    font-size: $small-title;
+  }
+  .profile__detail--name {
+    font-size: $body-1;
+  }
+  .priceAndButtom {
+    font-size: $headline-1;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .profile h1 {
+    font-size: $headline-2;
   }
   .profile__detail--name {
     font-size: $body-2;

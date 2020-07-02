@@ -44,8 +44,10 @@
   display: none;
 }
 
-@media screen and (max-width: 375px) {
-  .navbar {
+//media queries
+
+@media screen and (max-width: 768px) {
+    .navbar {
     grid-template-columns: 30px 1fr 30px;
   }
   .navbar__imgContainer {

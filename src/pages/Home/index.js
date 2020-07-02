@@ -27,6 +27,7 @@ const Home = () => {
       <section className="ListOfRooms">
         <ListOfRooms />
       </section>
+      <button className="loadMore">Load More</button>
       <section className="footer__mobile">
         <Footer />
       </section>
