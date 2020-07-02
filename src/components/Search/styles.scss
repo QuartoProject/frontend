@@ -1,0 +1,27 @@
+@import '../../Variables.scss';
+
+.search_box {
+  width: 100%;
+  position: relative;
+}
+
+.search_box input[type='text'] {
+  width: 100%;
+  padding: 10px 10px 10px 15px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  outline: none;
+}
+
+.search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 20px;
+  right: 6px;
+  font-size: 25px;
+  z-index: 999999;
+  border-left: 1px solid $color-secondary;
+}
