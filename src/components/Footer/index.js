@@ -7,7 +7,7 @@ import linkIcon from '../../assets/images/linkedin.svg';
 import twitIcon from '../../assets/images/twitter.svg';
 
 const Footer = () => (
-  <footer className="home__footer">
+  <footer>
     <div className="footer__menu">
       <ul>
         <li>&copy; 2020 Quarto. All rights reserved</li>

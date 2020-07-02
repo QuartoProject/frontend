@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Room from '../../components/Room';
 import Navbar from '../../components/Navbar';
+import ListOfRooms from '../../components/ListOfRooms';
+import Footer from '../../components/Footer';
 
 import './style.scss';
-
-import Footer from '../../components/Footer';
 
 const Home = () => {
   return (
@@ -19,12 +18,18 @@ const Home = () => {
         </section>
         <div className="carrousel__background"></div>
         <section className="home__carrousel">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((id) => (
-            <Room key={id} />
-          ))}
+          <ListOfRooms />
         </section>
-        <Footer />
+        <section className="home__footer">
+          <Footer />
+        </section>
       </main>
+      <section className="ListOfRooms">
+        <ListOfRooms />
+      </section>
+      <section className="footer__mobile">
+        <Footer />
+      </section>
     </>
   );
 };
