@@ -2,11 +2,8 @@
 
 main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  // padding: 1% 3%;
 }
 
 .login {
@@ -66,4 +63,35 @@ input[type=submit] {
   height: 55px;
   font-size: $body-2;
   margin-top: 16%;
+}
+
+// media queries
+
+@media screen and (max-width: 768px) {
+  .login {
+    display: inline-block;
+  }
+
+  .login__image{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    img {
+      width: 250px;
+    }
+  }
+
+  .login__content {
+    margin: 0 auto;
+    width: 80%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .login__content {
+    h1 {
+      font-size: $small-title;
+    }
+  }
 }
