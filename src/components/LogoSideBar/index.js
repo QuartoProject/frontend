@@ -3,7 +3,7 @@ import React from 'react';
 import Logo from '../../assets/images/quarto.svg';
 import './style.scss';
 
-const LogoBackgorund = () => {
+const LogoSideBar = () => {
   return (
     <section className="image">
       <img src={Logo} alt="Brand logo" />
@@ -11,4 +11,4 @@ const LogoBackgorund = () => {
   );
 };
 
-export default LogoBackgorund;
+export default LogoSideBar;

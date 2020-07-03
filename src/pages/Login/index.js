@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LogoBackgorund from '../../components/Background';
+import LogoSideBar from '../../components/LogoSideBar';
 import X from '../../assets/images/x.svg';
 import './style.scss';
 
@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <main>
       <article className="login">
-        <LogoBackgorund />
+        <LogoSideBar />
         <section className="login__content">
           <img className="x" src={X} alt="exit" />
           <h1>Iniciar sesión</h1>
