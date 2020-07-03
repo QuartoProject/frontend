@@ -4,7 +4,7 @@ import LogoBackgorund from '../../components/Background';
 import X from '../../assets/images/x.svg';
 import './style.scss';
 
-const index = () => {
+const Login = () => {
   return (
     <main>
       <article className="login">
@@ -29,4 +29,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Login;
