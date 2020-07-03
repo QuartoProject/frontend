@@ -1,20 +1,16 @@
 import React from 'react';
 
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-
+import LogoBackgorund from '../../components/Background';
+import X from '../../assets/images/x.svg';
 import './style.scss';
-import Logo from '../../assets/images/quarto.svg';
 
 const index = () => {
   return (
     <main>
-      {/* <Navbar /> */}
       <article className="login">
-        <section className="login__image">
-          <img src={Logo} alt="Brand logo" />
-        </section>
+        <LogoBackgorund />
         <section className="login__content">
+          <img className="x" src={X} alt="exit" />
           <h1>Iniciar sesión</h1>
           <form className="form">
             <div className="log form__name">
@@ -29,7 +25,6 @@ const index = () => {
           </form>
         </section>
       </article>
-      {/* <Footer /> */}
     </main>
   );
 };
