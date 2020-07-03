@@ -1,0 +1,91 @@
+@import '../../Variables.scss';
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: $color-secondary;
+}
+
+.login__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: inherit;
+  padding: 0 6.5%;
+  h1 {
+    font-size: $medium-title;
+    margin-bottom: 16%;
+  }
+}
+
+.x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  margin: 2% 2% 0 0;
+  cursor: pointer;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  border-style: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+label {
+  margin-bottom: 4.2%;
+}
+
+.name {
+  margin-bottom: 41px;
+}
+
+input[type=submit] {
+  @include boton_detail;
+  width: 100%;
+  height: 55px;
+  font-size: $body-2;
+  margin-top: 16%;
+}
+
+// media queries
+
+@media screen and (max-width: 768px) {
+  .login {
+    display: inline-block;
+  }
+
+  .login__content {
+    margin: 0 auto;
+    padding: 0 10%;
+    width: 80%;
+    height: 90%;
+  }
+
+  .x {
+    right: -11%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .login__content {
+    h1 {
+      font-size: $small-title;
+    }
+  }
+}
