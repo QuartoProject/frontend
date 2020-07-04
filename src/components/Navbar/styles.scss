@@ -1,9 +1,9 @@
 @import '../../Variables.scss';
 
 .navbar {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   background-color: transparent;
-  grid-template-columns: repeat(3, 1fr);
   height: 40px;
   color: $color-white-text;
 }
