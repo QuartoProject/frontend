@@ -22,9 +22,9 @@ const Login = () => {
           className="input name"
           type="email"
           name="email"
-          id="email"
           value={email}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="log form__password">
@@ -32,10 +32,10 @@ const Login = () => {
         <input
           className="input"
           type="password"
-          id="password"
           name="password"
           value={password}
           onChange={handleChange}
+          required
         />
       </div>
       <input type="submit" value="Inicia sesión" />
