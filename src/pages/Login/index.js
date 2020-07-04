@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import LogoSideBar from '../../components/LogoSideBar';
 import X from '../../assets/images/x.svg';
@@ -10,7 +11,9 @@ const Login = () => {
       <article className="login">
         <LogoSideBar />
         <section className="login__content">
-          <img className="x" src={X} alt="exit" />
+          <Link to="/">
+            <img className="x" src={X} alt="exit" />
+          </Link>
           <h1>Iniciar sesión</h1>
           <form className="form">
             <div className="log form__name">

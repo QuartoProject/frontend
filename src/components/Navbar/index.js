@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Search from '../Search';
 
@@ -10,14 +11,20 @@ const Navbar = () => {
   return (
     <header className="home__navbar">
       <nav className="navbar">
-        <figure className="navbar__imgContainer">
-          <img src={Logo} alt="Logo-Quarto" className="navbar__img"></img>
-        </figure>
+        <Link to="/">
+          <figure className="navbar__imgContainer">
+            <img src={Logo} alt="Logo-Quarto" className="navbar__img"></img>
+          </figure>
+        </Link>
         <Search />
         <ul className="navbar__navList">
           <li>Favoritos</li>
-          <li>Iniciar Sesión</li>
-          <li>Registrarse</li>
+          <li>
+            <Link to="/login">Iniciar Sesión</Link>
+          </li>
+          <li>
+            <Link to="/register">Registrarse</Link>
+          </li>
         </ul>
         <img
           className="navbar__hamburguerMenu"
