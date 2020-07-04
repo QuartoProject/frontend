@@ -15,11 +15,11 @@ const Register = () => {
           <form className="form">
             <div className="log">
               <label htmlFor="name">Nombre</label>
-              <input className="input name" type="email" id="name" />
+              <input className="input name" type="text" id="name" />
             </div>
             <div className="log">
               <label htmlFor="name">Apellido</label>
-              <input className="input name" type="email" id="name" />
+              <input className="input name" type="text" id="name" />
             </div>
             <div className="log">
               <label htmlFor="name">Email</label>
