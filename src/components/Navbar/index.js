@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <header className="home__navbar">
       <nav className="navbar">
-        <Link to="/">
+        <Link class="navbar__logo" to="/">
           <figure className="navbar__imgContainer">
             <img src={Logo} alt="Logo-Quarto" className="navbar__img"></img>
           </figure>
