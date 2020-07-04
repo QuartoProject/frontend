@@ -1,0 +1,20 @@
+@import '../../Variables.scss';
+
+.not__found {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-secondary;
+  text-align: center;
+  & img {
+    width: 250px;
+  }
+  a {
+    color: $color-secondary;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
