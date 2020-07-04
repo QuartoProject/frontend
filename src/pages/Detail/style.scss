@@ -1,0 +1,81 @@
+@import '../../Variables.scss';
+
+.detail {
+  display: grid;
+  grid-template-columns: 3% 1fr 3%;
+  grid-template-rows: 2% 4% 1fr 9%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.detail__navbar {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.detail__content {
+  display: flex;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  padding: 1% 0;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  // background-color: $color-primary;
+  &__main {
+    width: 100%;
+    height: 80%;
+    background-image: url("https://i.imgur.com/GWfERoM.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 20%;
+    margin-top: 10px;
+  }
+}
+
+.carrousel {
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: white;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 22px;
+    background-color: $color-primary;
+  }
+}
+
+.caja {
+  width: 160px;
+  height: 100%;
+  margin-right: 10px;
+  background-image: url("https://i.imgur.com/aSTWS3u.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .5;
+}
+
+.dos {
+  width: 40%;
+  background-color: $color-secondary;
+}
+
+.footer {
+  grid-column: 2 / 4;
+  grid-row: 4 / 5;
+}
