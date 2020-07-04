@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Room from '../../components/Room';
 import Navbar from '../../components/Navbar';
+import ListOfRooms from '../../components/ListOfRooms';
+import Footer from '../../components/Footer';
 
 import './style.scss';
 
@@ -17,14 +18,19 @@ const Home = () => {
         </section>
         <div className="carrousel__background"></div>
         <section className="home__carrousel">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((id) => (
-            <Room key={id} />
-          ))}
+          <ListOfRooms />
         </section>
-        <footer className="home__footer">
-          <h1>Reemplazar este div por el footer</h1>
-        </footer>
+        <section className="home__footer">
+          <Footer />
+        </section>
       </main>
+      <section className="ListOfRooms">
+        <ListOfRooms />
+      </section>
+      <button className="loadMore">Load More</button>
+      <section className="footer__mobile">
+        <Footer />
+      </section>
     </>
   );
 };

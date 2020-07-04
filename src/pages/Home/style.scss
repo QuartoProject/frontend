@@ -17,6 +17,9 @@
   grid-template-rows: 2% 4% 8% 1fr 5% 9%;
   width: 100vw;
   height: 100vh;
+  background-image: url("https://i.imgur.com/FQxxUnj.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .home__title {
@@ -69,14 +72,98 @@
     opacity: 0.65;
 }
 
-.home__room {
-  grid-column: 3 / 4;
-  grid-row: 4 / 5;
-}
-
 .home__footer {
   grid-column: 2 / 4;
   grid-row: 6 / 7;
-  align-self: center;
-  justify-self: center;
+}
+
+.ListOfRooms {
+  display: none;
+}
+
+.footer__mobile {
+  display: none;
+}
+
+.loadMore {
+  display: none;
+}
+
+// media-queries
+
+@media screen and (max-width: 768px) {
+  .home__transition {
+    background-image: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(95, 95, 95, 0.52) 30%,
+    rgba(196, 196, 196, 0) 100%
+  );
+}
+  .home {
+    display: grid;
+    grid-template-columns: 3% 1fr 3%;
+    grid-template-rows: 3% 5% 11.5% 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+  }
+  .home__navbar {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  .home__title {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    align-self: center;
+    h1 {
+      margin-left: -1%;
+      font-weight: bold;
+      font-size: $tablet-title;
+    }
+    p {
+      margin-bottom: -10px;
+      font-size: $body-2;
+    }
+  }
+  .carrousel__background {
+    display: none;
+  }
+  .home__carrousel {
+    display: none;
+  }
+  .ListOfRooms {
+    display: block;
+    margin-top: -40%;
+    background-color: white;
+    border-radius: 22px;
+  }
+  .home__footer {
+    display: none;
+  }
+  .footer__mobile {
+    display: block;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+  }
+  .loadMore {
+    @include boton_detail;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 10% auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home__title {
+    h1 {
+      font-size: $medium-title;
+    }
+    p {
+      font-size: $small;
+    }
+  }
+  .ListOfRooms {
+    margin-top: -60%;
+  }
 }
