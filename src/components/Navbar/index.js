@@ -18,7 +18,9 @@ const Navbar = () => {
         </Link>
         <Search />
         <ul className="navbar__navList">
-          <li>Favoritos</li>
+          <li>
+            <Link to="/favorites">Favoritos</Link>
+          </li>
           <li>
             <Link to="/login">Iniciar Sesión</Link>
           </li>
