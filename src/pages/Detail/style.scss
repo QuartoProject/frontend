@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   width: 60%;
-  // background-color: $color-primary;
+  margin-right: 20px;
   &__main {
     width: 100%;
     height: 80%;
@@ -50,7 +50,8 @@
   overflow: hidden;
   overflow-x: scroll;
   &::-webkit-scrollbar {
-    width: 8px;
+    // width: 8px;
+    height: 8px;
     background-color: white;
   }
   &::-webkit-scrollbar-thumb {
@@ -70,9 +71,108 @@
   opacity: .5;
 }
 
-.dos {
+.description {
+  display: grid;
+  grid-template-rows: 40% 20% 20% 20%;
   width: 40%;
-  background-color: $color-secondary;
+}
+
+.cards {
+  width: 100%;
+  height: 90%;
+  border-radius: 22px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.25);
+}
+
+.uno {
+  // grid-row: 1 / 2;
+  display: flex;
+  color: $color-secondary;
+  h1 {
+    font-size: $small-title;
+  }
+}
+
+.icon {
+  margin: 5%;
+  img {
+    width: 34px;
+    fill: white;
+  }
+}
+
+.data__profile {
+  margin: 5% 10% 0 0;
+}
+
+.dos {
+  display: flex;
+  width: 100%;
+  color: $color-secondary;
+}
+
+.photo__person {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // width: 50%;
+  // height: 50px;
+  margin: 5% 3%;
+  text-align: center;
+  // border-radius: 50%;
+  // background-color: rebeccapurple;
+  img {
+    width: 40px;
+    // height: 50px;
+    border-radius: 50%;
+  }
+  h5 {
+    margin-top: 5px;
+  }
+}
+
+.person__description {
+  display: flex;
+  align-items: center;
+  margin: 3% 0;
+}
+
+.tres {
+  // grid-row: 3 / 4;
+  color: $color-secondary;
+  h1 {
+    margin: 2% 4%;
+  }
+}
+
+.servicios {
+  display: flex;
+  align-items: center;
+  margin-left: 4%;
+  img {
+    margin-right: 5px;
+  }
+}
+
+.cuatro {
+  align-self: center;
+  grid-row: 4 / 5;
+}
+
+.btn {
+  @include boton_detail;
+  width: 48%;
+  height: 55px;
+  font-size: $headline-2;
+}
+
+.wa {
+  margin-right: 2%;
+  background-image: linear-gradient(180deg, #1bd741, #38b050);
+}
+
+.email {
+  background-image: linear-gradient(180deg, #d74c3e, #ba5248);
 }
 
 .footer {

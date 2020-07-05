@@ -3,6 +3,10 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
+import IconMap from '../../assets/images/map.svg';
+import Mario from '../../assets/images/mario-foto.jpg';
+import Wifi from '../../assets/images/wifi.svg';
+
 import './style.scss';
 
 const Detail = () => {
@@ -26,7 +30,49 @@ const Detail = () => {
             </div>
           </div>
         </section>
-        <section className="dos"></section>
+        <section className="description">
+          <div className="cards uno">
+            <div className="icon">
+              <img src={IconMap} alt="Icon place" />
+            </div>
+            <div className="data__profile">
+              <h1>título</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia reprehenderit praesentium nesciunt laudantium, fugiat
+                facere, neque consequatur
+              </p>
+              <br />
+              <hr />
+              <br />
+              <p>descripción</p>
+            </div>
+          </div>
+          <div className="cards dos">
+            <div className="photo__person">
+              <img src={Mario} alt="foto" />
+              <h5>Nombre</h5>
+            </div>
+            <div className="person__description">
+              <i>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                necessitatibus, illum excepturi libero quod quos assumenda quasi
+                magni debitis! Facere beatae provident.
+              </i>
+            </div>
+          </div>
+          <div className="cards tres">
+            <h1>Servicios</h1>
+            <div className="servicios">
+              <img src={Wifi} alt="Icon wifi" />
+              <p>Wifi</p>
+            </div>
+          </div>
+          <div className="cuatro">
+            <button className="btn wa">Whatsapp</button>
+            <button className="btn email">Email</button>
+          </div>
+        </section>
       </article>
       <div className="footer">
         <Footer />

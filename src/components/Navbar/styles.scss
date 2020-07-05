@@ -48,6 +48,9 @@
   display: none;
 }
 
+#color_black {
+  color: $color-secondary;
+}
 //media queries
 
 @media screen and (max-width: 768px) {
