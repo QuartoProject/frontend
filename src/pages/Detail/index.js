@@ -13,7 +13,7 @@ const Detail = () => {
   return (
     <main className="detail">
       <div className="detail__navbar">
-        <Navbar />
+        <Navbar prop={true} />
       </div>
       <article className="detail__content">
         <section className="photos">
@@ -31,7 +31,7 @@ const Detail = () => {
           </div>
         </section>
         <section className="description">
-          <div className="cards uno">
+          <div className="cards card__location">
             <div className="icon">
               <img src={IconMap} alt="Icon place" />
             </div>
@@ -48,7 +48,7 @@ const Detail = () => {
               <p>descripción</p>
             </div>
           </div>
-          <div className="cards dos">
+          <div className="cards card__profile">
             <div className="photo__person">
               <img src={Mario} alt="foto" />
               <h5>Nombre</h5>
@@ -61,14 +61,14 @@ const Detail = () => {
               </i>
             </div>
           </div>
-          <div className="cards tres">
+          <div className="cards card__services">
             <h1>Servicios</h1>
             <div className="servicios">
               <img src={Wifi} alt="Icon wifi" />
               <p>Wifi</p>
             </div>
           </div>
-          <div className="cuatro">
+          <div className="buttoms">
             <button className="btn wa">Whatsapp</button>
             <button className="btn email">Email</button>
           </div>

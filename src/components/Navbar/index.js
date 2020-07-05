@@ -7,7 +7,8 @@ import Logo from '../../assets/images/logoQuarto.svg';
 import HamburguerMenu from '../../assets/images/menu-hamburguer.svg';
 import './styles.scss';
 
-const Navbar = () => {
+const Navbar = (color__change) => {
+  const { prop } = color__change;
   return (
     <header className="home__navbar">
       <nav className="navbar">
@@ -18,12 +19,19 @@ const Navbar = () => {
         </Link>
         <Search />
         <ul className="navbar__navList">
-          <li>Favoritos</li>
+          <li className={prop ? 'color__black' : 'color__white'}>Favoritos</li>
           <li>
-            <Link to="/login">Iniciar Sesión</Link>
+            <Link
+              to="/login"
+              className={prop ? 'color__black' : 'color__white'}
+            >
+              Iniciar Sesión
+            </Link>
           </li>
           <li>
-            <Link to="/register">Registrarse</Link>
+            <Link to="/register" className="color__white">
+              Registrarse
+            </Link>
           </li>
         </ul>
         <img

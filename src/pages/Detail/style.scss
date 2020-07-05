@@ -84,8 +84,7 @@
   box-shadow: 0 5px 10px rgba(0,0,0,.25);
 }
 
-.uno {
-  // grid-row: 1 / 2;
+.card__location {
   display: flex;
   color: $color-secondary;
   h1 {
@@ -105,25 +104,17 @@
   margin: 5% 10% 0 0;
 }
 
-.dos {
+.card__profile {
   display: flex;
   width: 100%;
   color: $color-secondary;
 }
 
 .photo__person {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // width: 50%;
-  // height: 50px;
   margin: 5% 3%;
   text-align: center;
-  // border-radius: 50%;
-  // background-color: rebeccapurple;
   img {
     width: 40px;
-    // height: 50px;
     border-radius: 50%;
   }
   h5 {
@@ -137,8 +128,7 @@
   margin: 3% 0;
 }
 
-.tres {
-  // grid-row: 3 / 4;
+.card__services {
   color: $color-secondary;
   h1 {
     margin: 2% 4%;
@@ -154,7 +144,7 @@
   }
 }
 
-.cuatro {
+.buttoms {
   align-self: center;
   grid-row: 4 / 5;
 }
