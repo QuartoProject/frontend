@@ -20,13 +20,13 @@ const Detail = () => {
           <div className="photos__main"></div>
           <div className="photos__container">
             <div className="carrousel">
-              <div className="caja"></div>
-              <div className="caja"></div>
-              <div className="caja"></div>
-              <div className="caja"></div>
-              <div className="caja"></div>
-              <div className="caja"></div>
-              <div className="caja"></div>
+              <ul>
+                <li>
+                  <div className="caja"></div>
+                </li>
+                {/* {[1, 2, 3, 4, 5, 6, 7].map(() => {
+                })} */}
+              </ul>
             </div>
           </div>
         </section>

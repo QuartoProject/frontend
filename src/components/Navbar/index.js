@@ -8,8 +8,8 @@ import HamburguerMenu from '../../assets/images/menu-hamburguer.svg';
 import HamburguerMenuBlack from '../../assets/images/menu-hamburguer-black.svg';
 import './styles.scss';
 
-const Navbar = (color__change) => {
-  const { prop } = color__change;
+const Navbar = (prop) => {
+  const COLOR_CHANGE = prop.prop;
   const ICON = prop ? HamburguerMenuBlack : HamburguerMenu;
   return (
     <header className="home__navbar">
@@ -21,11 +21,13 @@ const Navbar = (color__change) => {
         </Link>
         <Search />
         <ul className="navbar__navList">
-          <li className={prop ? 'color__black' : 'color__white'}>Favoritos</li>
+          <li className={COLOR_CHANGE ? 'color__black' : 'color__white'}>
+            Favoritos
+          </li>
           <li>
             <Link
               to="/login"
-              className={prop ? 'color__black' : 'color__white'}
+              className={COLOR_CHANGE ? 'color__black' : 'color__white'}
             >
               Iniciar Sesión
             </Link>
