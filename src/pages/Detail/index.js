@@ -21,11 +21,13 @@ const Detail = () => {
           <div className="photos__container">
             <div className="carrousel">
               <ul>
-                <li>
-                  <div className="caja"></div>
-                </li>
-                {/* {[1, 2, 3, 4, 5, 6, 7].map(() => {
-                })} */}
+                {[1, 2, 3, 4, 5, 6, 7].map((id) => {
+                  return (
+                    <li key={id}>
+                      <div className="caja"></div>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
