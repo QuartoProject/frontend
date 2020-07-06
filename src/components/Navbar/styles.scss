@@ -23,6 +23,30 @@
   line-height: 2;
 }
 
+.navbar__navList2 {
+  display: block;
+  position: absolute;
+  left: 8%;
+  top: 8%;
+  width: 80%;
+  li {
+    display: block;
+    text-align: center;
+    padding: 3px 10px;
+    cursor: pointer;
+    a {
+      text-decoration: none;
+      color: $color-white-text;
+    }
+    &:last-child {
+      background-color: $color-primary;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 15px;
+    }
+  }
+}
+
 .navbar__navList li {
   display: block;
   text-align: center;
