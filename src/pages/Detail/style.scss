@@ -111,36 +111,53 @@
 }
 
 .photo__person {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin: 5% 3%;
-  text-align: center;
-  img {
-    width: 40px;
-    border-radius: 50%;
-  }
+  // text-align: center;
   h5 {
     margin-top: 5px;
+  }
+}
+
+.photo__container {
+  width: 40px;
+  height: 40px;
+  img {
+    width: 100%;
+    border-radius: 50%;
   }
 }
 
 .person__description {
   display: flex;
   align-items: center;
-  margin: 3% 0;
+  margin: 3% 2%;
 }
 
 .card__services {
   color: $color-secondary;
   h1 {
     margin: 2% 4%;
+    font-size: 24px;
   }
 }
 
-.servicios {
+.services {
   display: flex;
   align-items: center;
   margin-left: 4%;
   img {
     margin-right: 5px;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      margin-right: 10px;
+    }
   }
 }
 
@@ -201,7 +218,47 @@
   .card__services {
     height: 22%;
   }
+  .services ul {
+    list-style: none;
+    display: flex;
+  }
+  .services ul li {
+    margin-right: 10px;
+  }
   .buttons {
     margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .detail__content {
+    height: 1060px;
+    margin-top: 10px;
+  }
+  .card__location h1 {
+    font-size: 24px;
+  }
+  .data__profile p {
+    font-size: 12px;
+  }
+  .person__description i {
+    font-size: 12px;
+  }
+  .services {
+    overflow: hidden;
+    overflow-x: scroll;
+    ul li {
+      text-align: center;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .card__services h1 {
+    margin: 6% 4% 6px 4%;
+    font-size: 20px;
+  }
+  footer {
+    padding: 0;
   }
 }

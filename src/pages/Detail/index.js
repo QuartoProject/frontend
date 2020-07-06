@@ -50,7 +50,9 @@ const Detail = () => {
           </div>
           <div className="cards card__profile">
             <div className="photo__person">
-              <img src={Mario} alt="foto" />
+              <div className="photo__container">
+                <img src={Mario} alt="foto" />
+              </div>
               <h5>Nombre</h5>
             </div>
             <div className="person__description">
@@ -63,9 +65,17 @@ const Detail = () => {
           </div>
           <div className="cards card__services">
             <h1>Servicios</h1>
-            <div className="servicios">
-              <img src={Wifi} alt="Icon wifi" />
-              <p>Wifi</p>
+            <div className="services">
+              <ul>
+                {[1, 2, 3].map((id) => {
+                  return (
+                    <li key={id}>
+                      <img src={Wifi} alt="Icon wifi" />
+                      <p>Wifi</p>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
           <div className="buttons">

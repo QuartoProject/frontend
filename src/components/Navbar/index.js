@@ -5,10 +5,12 @@ import Search from '../Search';
 
 import Logo from '../../assets/images/logoQuarto.svg';
 import HamburguerMenu from '../../assets/images/menu-hamburguer.svg';
+import HamburguerMenuBlack from '../../assets/images/menu-hamburguer-black.svg';
 import './styles.scss';
 
 const Navbar = (color__change) => {
   const { prop } = color__change;
+  const ICON = prop ? HamburguerMenuBlack : HamburguerMenu;
   return (
     <header className="home__navbar">
       <nav className="navbar">
@@ -36,7 +38,7 @@ const Navbar = (color__change) => {
         </ul>
         <img
           className="navbar__hamburguerMenu"
-          src={HamburguerMenu}
+          src={ICON}
           alt="Hamburguer menu"
         />
       </nav>
