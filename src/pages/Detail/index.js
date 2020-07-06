@@ -68,7 +68,7 @@ const Detail = () => {
               <p>Wifi</p>
             </div>
           </div>
-          <div className="buttoms">
+          <div className="buttons">
             <button className="btn wa">Whatsapp</button>
             <button className="btn email">Email</button>
           </div>
