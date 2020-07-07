@@ -75,24 +75,20 @@
 .home__footer {
   grid-column: 2 / 4;
   grid-row: 6 / 7;
-}
-
-.ListOfRooms {
-  display: none;
-}
-
-.footer__mobile {
-  display: none;
-}
-
-.loadMore {
-  display: none;
+  box-shadow: 0 0 10px rgba(95, 95, 95, 0.52);
 }
 
 // media-queries
 
 @media screen and (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
   .home__transition {
+    position: absolute;
     background-image: linear-gradient(
     180deg,
     #000000 0%,
@@ -100,21 +96,19 @@
     rgba(196, 196, 196, 0) 100%
   );
 }
-  .home {
-    display: grid;
-    grid-template-columns: 3% 1fr 3%;
-    grid-template-rows: 3% 5% 11.5% 1fr 1fr;
-    width: 100vw;
-    height: 100vh;
-  }
   .home__navbar {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    position: absolute;
+    right: 0;
+    left: 0;
+    padding: 4%;
   }
   .home__title {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    padding: 0 4%;
     h1 {
       margin-left: -1%;
       font-weight: bold;
@@ -126,31 +120,23 @@
     }
   }
   .carrousel__background {
-    display: none;
+    position: absolute;
+    top: 70%;
+    border-radius: 22px 22px 0 0;
   }
   .home__carrousel {
-    display: none;
+    position: absolute;
+    bottom: -1069px;
+    height: auto;
+    overflow-y: visible;
+    overflow: visible;
   }
-  .ListOfRooms {
-    display: block;
-    margin-top: -40%;
-    background-color: white;
-    border-radius: 22px;
-  }
-  .home__footer {
-    display: none;
-  }
-  .footer__mobile {
-    display: block;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
-  }
-  .loadMore {
-    @include boton_detail;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin: 10% auto;
+    .home__footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -117%;
+    z-index: 4;
   }
 }
 
@@ -163,7 +149,10 @@
       font-size: $small;
     }
   }
-  .ListOfRooms {
-    margin-top: -60%;
+  .home__carrousel {
+    bottom: -35%;
+  }
+  .home__footer {
+    bottom: -50%;
   }
 }

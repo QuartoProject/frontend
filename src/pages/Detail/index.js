@@ -13,7 +13,7 @@ const Detail = () => {
   return (
     <main className="detail">
       <div className="detail__navbar">
-        <Navbar prop={true} />
+        <Navbar changeColor={true} />
       </div>
       <article className="detail__content">
         <section className="photos">
