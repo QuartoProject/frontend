@@ -6,6 +6,8 @@ import Search from '../Search';
 import Logo from '../../assets/images/logoQuarto.svg';
 import HamburguerMenu from '../../assets/images/menu-hamburguer.svg';
 import HamburguerMenuBlack from '../../assets/images/menu-hamburguer-black.svg';
+import X from '../../assets/images/x.svg';
+
 import './styles.scss';
 
 const Navbar = (prop) => {
@@ -15,8 +17,9 @@ const Navbar = (prop) => {
   const handleClick = () => {
     setToggle(!toggle);
   };
+  const MENU = toggle ? ICON : X;
   return (
-    <header className="home__navbar">
+    <header>
       <nav className="navbar">
         <Link className="navbar__logo" to="/">
           <figure className="navbar__imgContainer">
@@ -43,11 +46,12 @@ const Navbar = (prop) => {
           </li>
         </ul>
         <img
-          className="navbar__hamburguerMenu"
-          src={ICON}
+          className={toggle ? 'navbar__hamburguerMenu' : 'fixed'}
+          src={MENU}
           alt="Hamburguer menu"
           onClick={handleClick}
         />
+        <div className={toggle ? 'hidden' : 'navbar__background'}></div>
       </nav>
     </header>
   );
