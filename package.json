@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "Frontend for Quarto Project",
-  "main": "index.js",
+  "main": "index.js",  
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/QuartoProject/frontend/issues"
   },
-  "homepage": "https://github.com/QuartoProject/frontend#readme",
+  "homepage": "./",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
