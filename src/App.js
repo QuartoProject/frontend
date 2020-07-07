@@ -6,11 +6,13 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
+import Favoritos from './pages/Favorites';
 
 const App = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route path="/favorites" component={Favoritos} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <Route path="/detail" component={Detail} />
