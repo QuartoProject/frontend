@@ -12,7 +12,7 @@ const Home = () => {
       <main className="home">
         <div className="home__transition"></div>
         <div className="home__navbar">
-          <Navbar prop={false} />
+          <Navbar changeColor={false} />
         </div>
         <section className="home__title">
           <p>Busca tu rommie perfecto en</p>

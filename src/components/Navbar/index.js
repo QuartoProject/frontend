@@ -11,7 +11,7 @@ import X from '../../assets/images/x.svg';
 import './styles.scss';
 
 const Navbar = (prop) => {
-  const COLOR_CHANGE = prop.prop;
+  const COLOR_CHANGE = prop.changeColor;
   const ICON = COLOR_CHANGE ? HamburguerMenuBlack : HamburguerMenu;
   const [toggle, setToggle] = useState(true);
   const handleClick = () => {
