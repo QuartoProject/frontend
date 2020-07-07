@@ -11,7 +11,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/',
   },
   devServer: {
     historyApiFallback: true,
@@ -64,7 +63,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'images',
+              outputPath: 'assets/images',
             },
           },
         ],
