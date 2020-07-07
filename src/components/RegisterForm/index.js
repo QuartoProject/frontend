@@ -78,6 +78,10 @@ const Register = () => {
           required
         />
       </div>
+      <div className="typeOfUser">
+        <input className="anfitrion" type="checkbox" />
+        <input className="usuario" type="checkbox" />
+      </div>
       <input type="submit" value="Regístrate" />
     </form>
   );

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import LogoSideBar from '../../components/LogoSideBar';
 import RegisterForm from '../../components/RegisterForm';
-import X from '../../assets/images/x.svg';
+import X from '../../assets/images/x-black.svg';
 import './style.scss';
 
 const Register = () => (
