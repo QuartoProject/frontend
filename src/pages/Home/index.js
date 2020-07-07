@@ -24,13 +24,13 @@ const Home = () => {
           <Footer />
         </section>
       </main>
-      <section className="ListOfRooms">
+      {/* <section className="ListOfRooms">
         <ListOfRooms />
-      </section>
-      <button className="loadMore">Load More</button>
-      <section className="footer__mobile">
+      </section> */}
+      {/* <button className="loadMore">Load More</button> */}
+      {/* <section className="footer__mobile">
         <Footer />
-      </section>
+      </section> */}
     </>
   );
 };
