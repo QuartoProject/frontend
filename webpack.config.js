@@ -1,6 +1,7 @@
-const path = require('path');
+const resolve = require('path').resolve;
 const HTMLWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 
@@ -9,11 +10,13 @@ const inDevMode = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: resolve(__dirname, 'dist'),
+    filename: 'js/bundle.js',
   },
+  devtool: 'cheap-module-source-map',
   devServer: {
     historyApiFallback: true,
+    open: true,
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -82,8 +85,12 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['dist'],
+    }),
     new HTMLWebPackPlugin({
-      template: path.resolve(__dirname, 'public/index.html'),
+      template: resolve(__dirname, 'public/index.html'),
+      inject: true,
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
