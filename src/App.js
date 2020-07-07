@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Favoritos from './pages/Favorites';
 
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="/favorites" component={Favoritos} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
+      <Route path="/detail" component={Detail} />
       <Route path="*" component={NoMatch} />
     </Switch>
   );
