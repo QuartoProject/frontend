@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <main className="home">
         <div className="home__transition"></div>
-        <Navbar className="home__navbar" />
+        <Navbar prop={false} />
         <section className="home__title">
           <p>Busca tu rommie perfecto en</p>
           <h1>Bogotá</h1>

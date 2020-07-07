@@ -5,11 +5,13 @@ import Search from '../Search';
 
 import Logo from '../../assets/images/logoQuarto.svg';
 import HamburguerMenu from '../../assets/images/menu-hamburguer.svg';
+import HamburguerMenuBlack from '../../assets/images/menu-hamburguer-black.svg';
 import './styles.scss';
 
-const Navbar = () => {
+const Navbar = (prop) => {
+  const COLOR_CHANGE = prop.prop;
+  const ICON = prop ? HamburguerMenuBlack : HamburguerMenu;
   const [toggle, setToggle] = useState(true);
-  // const [menu, setMenu] = useState('navbar__navList');
   console.log(toggle);
   const handleClick = () => {
     setToggle(!toggle);
@@ -17,24 +19,33 @@ const Navbar = () => {
   return (
     <header className="home__navbar">
       <nav className="navbar">
-        <Link class="navbar__logo" to="/">
+        <Link className="navbar__logo" to="/">
           <figure className="navbar__imgContainer">
             <img src={Logo} alt="Logo-Quarto" className="navbar__img"></img>
           </figure>
         </Link>
         <Search />
         <ul className={toggle ? 'navbar__navList' : 'navbar__navList2'}>
-          <li>Favoritos</li>
-          <li>
-            <Link to="/login">Iniciar Sesión</Link>
+          <li className={COLOR_CHANGE ? 'color__black' : 'color__white'}>
+            Favoritos
           </li>
           <li>
-            <Link to="/register">Registrarse</Link>
+            <Link
+              to="/login"
+              className={COLOR_CHANGE ? 'color__black' : 'color__white'}
+            >
+              Iniciar Sesión
+            </Link>
+          </li>
+          <li>
+            <Link to="/register" className="color__white">
+              Registrarse
+            </Link>
           </li>
         </ul>
         <img
           className="navbar__hamburguerMenu"
-          src={HamburguerMenu}
+          src={ICON}
           alt="Hamburguer menu"
           onClick={handleClick}
         />

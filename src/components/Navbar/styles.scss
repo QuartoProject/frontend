@@ -51,17 +51,21 @@
   display: block;
   text-align: center;
   padding: 3px 10px;
-  a {
-    text-decoration: none;
-    color: $color-white-text;
-  }
+}
+.color__white {
+  text-decoration: none;
+  color: $color-white-text;
+}
+.color__black {
+  text-decoration: none;
+  color: $color-secondary;
 }
 
 .navbar__navList li:last-child {
-  background-color: $color-primary;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 15px;
+  background-color: $color-primary;
 }
 
 .navbar__navList li:hover {
