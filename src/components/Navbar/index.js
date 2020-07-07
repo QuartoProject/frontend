@@ -12,7 +12,6 @@ const Navbar = (prop) => {
   const COLOR_CHANGE = prop.prop;
   const ICON = COLOR_CHANGE ? HamburguerMenuBlack : HamburguerMenu;
   const [toggle, setToggle] = useState(true);
-  console.log(toggle);
   const handleClick = () => {
     setToggle(!toggle);
   };
