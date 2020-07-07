@@ -234,11 +234,17 @@
 
 @media screen and (max-width: 425px) {
   .detail__content {
-    height: 1060px;
+    height: 1160px;
     margin-top: 10px;
   }
-  .card__location h1 {
-    font-size: 24px;
+  .cards {
+    margin-bottom: 20px;
+  }
+  .card__location {
+    margin-top: 20px;
+    h1 {
+      font-size: 24px;
+    }
   }
   .data__profile p {
     font-size: 12px;

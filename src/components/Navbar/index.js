@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Search from '../Search';
@@ -10,7 +10,11 @@ import './styles.scss';
 
 const Navbar = (prop) => {
   const COLOR_CHANGE = prop.prop;
-  const ICON = prop ? HamburguerMenuBlack : HamburguerMenu;
+  const ICON = COLOR_CHANGE ? HamburguerMenuBlack : HamburguerMenu;
+  const [toggle, setToggle] = useState(true);
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
   return (
     <header className="home__navbar">
       <nav className="navbar">
@@ -20,7 +24,7 @@ const Navbar = (prop) => {
           </figure>
         </Link>
         <Search />
-        <ul className="navbar__navList">
+        <ul className={toggle ? 'navbar__navList' : 'navbar__navList2'}>
           <li className={COLOR_CHANGE ? 'color__black' : 'color__white'}>
             Favoritos
           </li>
@@ -42,6 +46,7 @@ const Navbar = (prop) => {
           className="navbar__hamburguerMenu"
           src={ICON}
           alt="Hamburguer menu"
+          onClick={handleClick}
         />
       </nav>
     </header>
