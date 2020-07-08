@@ -11,7 +11,7 @@ const Favoritos = () => {
     <>
       <main className="main">
         <section className="main__navbar">
-          <Navbar />
+          <Navbar changeColor={true} />
         </section>
 
         <section className="main__listOfRooms">

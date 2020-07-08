@@ -28,8 +28,13 @@ const Navbar = (prop) => {
         </Link>
         <Search />
         <ul className={toggle ? 'navbar__navList' : 'navbar__navList2'}>
-          <li className={COLOR_CHANGE ? 'color__black' : 'color__white'}>
-            Favoritos
+          <li>
+            <Link
+              to="/favorites"
+              className={COLOR_CHANGE ? 'color__black' : 'color__white'}
+            >
+              Favoritos
+            </Link>
           </li>
           <li>
             <Link
