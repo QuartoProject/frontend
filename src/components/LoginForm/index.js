@@ -6,7 +6,7 @@ import axios from 'axios';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useStater('');
+  const [error, setError] = useState('');
 
   function login({ username, password }) {
     axios
