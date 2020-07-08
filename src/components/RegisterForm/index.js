@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 
+const ENDPOINT = 'https://quarto-backend.herokuapp.com/api';
+import axios from 'axios';
+
 const Register = () => {
-  const [name, setName] = useState('');
-  const [lastName, setlastName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -10,11 +12,8 @@ const Register = () => {
     const { name, value } = e.target;
 
     switch (name) {
-      case 'name':
-        setName(value);
-        break;
-      case 'lastName':
-        setlastName(value);
+      case 'username':
+        setUsername(value);
         break;
       case 'email':
         setEmail(value);
@@ -29,35 +28,31 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, lastName, email, password);
+    axios
+      .post(`${ENDPOINT}/register/`, {
+        username,
+        email,
+        password,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err.message));
   };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="log">
-        <label htmlFor="name">Nombre</label>
+        <label htmlFor="username">Username</label>
         <input
           className="input name"
           type="text"
-          name="name"
-          value={name}
+          name="username"
+          value={username}
           onChange={handleChange}
           required
         />
       </div>
       <div className="log">
-        <label htmlFor="name">Apellido</label>
-        <input
-          className="input name"
-          type="text"
-          name="lastName"
-          value={lastName}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="log">
-        <label htmlFor="name">Email</label>
+        <label htmlFor="email">Email</label>
         <input
           className="input name"
           type="email"
@@ -77,10 +72,6 @@ const Register = () => {
           onChange={handleChange}
           required
         />
-      </div>
-      <div className="typeOfUser">
-        <input className="anfitrion" type="checkbox" />
-        <input className="usuario" type="checkbox" />
       </div>
       <input type="submit" value="Regístrate" />
     </form>
