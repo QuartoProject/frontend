@@ -23,21 +23,50 @@
   line-height: 2;
 }
 
+.navbar__navList2 {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 34px;
+  width: 100%;
+  height: 100vh;
+  li {
+    display: block;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: $color-white-text;
+    a {
+      text-decoration: none;
+      color: $color-white-text;
+    }
+  }
+}
+
 .navbar__navList li {
   display: block;
   text-align: center;
   padding: 3px 10px;
-  a {
-    text-decoration: none;
-    color: $color-white-text;
-  }
+}
+.color__white {
+  text-decoration: none;
+  color: $color-white-text;
+}
+.color__black {
+  text-decoration: none;
+  color: $color-secondary;
 }
 
 .navbar__navList li:last-child {
-  background-color: $color-primary;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 15px;
+  background-color: $color-primary;
 }
 
 .navbar__navList li:hover {
@@ -48,11 +77,43 @@
   display: none;
 }
 
+.navbar__background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-primary;
+  opacity: .7;
+  backdrop-filter: blur(250px);
+}
+
+.hidden {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 50px;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 //media queries
 
 @media screen and (max-width: 768px) {
-    .navbar {
+  .navbar {
     grid-template-columns: 30px 1fr 30px;
+  }
+  .navbar__logo {
+    width: 45px;
   }
   .navbar__imgContainer {
     width: 30px;
@@ -65,10 +126,12 @@
     text-align: center;
   }
   .navbar__hamburguerMenu {
+    position: relative;
+    z-index: 6;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 10%;
     height: 100%;
   }
 }

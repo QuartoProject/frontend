@@ -2,9 +2,9 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "Frontend for Quarto Project",
-  "main": "index.js",
+  "main": "index.js",  
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/QuartoProject/frontend/issues"
   },
-  "homepage": "https://github.com/QuartoProject/frontend#readme",
+  "homepage": "https://quartoproject.github.io/frontend/",
   "dependencies": {
     "axios": "^0.19.2",
     "react": "^16.13.1",
@@ -38,6 +38,7 @@
     "autoprefixer": "^9.8.4",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
@@ -70,14 +71,10 @@
       "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js",
       "\\.(png|jpg|gif|ttf|eot|svg)$": "<rootDir>/src/__mocks__/fileMock.js"
     },
-    "coverageThreshold": {
-      "global": {
-        "branches": 60,
-        "functions": 60,
-        "lines": 60,
-        "statements": -10
-      }
-    }
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ]
   },
   "browserslist": [
     "> 1%",

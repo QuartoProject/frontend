@@ -42,6 +42,7 @@ const Login = () => {
           name="username"
           value={username}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="log form__password">
@@ -49,10 +50,10 @@ const Login = () => {
         <input
           className="input"
           type="password"
-          id="password"
           name="password"
           value={password}
           onChange={handleChange}
+          required
         />
       </div>
       <input type="submit" value="Inicia sesión" />

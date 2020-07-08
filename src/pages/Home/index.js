@@ -11,7 +11,9 @@ const Home = () => {
     <>
       <main className="home">
         <div className="home__transition"></div>
-        <Navbar className="home__navbar" />
+        <div className="home__navbar">
+          <Navbar changeColor={false} />
+        </div>
         <section className="home__title">
           <p>Busca tu rommie perfecto en</p>
           <h1>Bogotá</h1>
@@ -24,13 +26,6 @@ const Home = () => {
           <Footer />
         </section>
       </main>
-      <section className="ListOfRooms">
-        <ListOfRooms />
-      </section>
-      <button className="loadMore">Load More</button>
-      <section className="footer__mobile">
-        <Footer />
-      </section>
     </>
   );
 };

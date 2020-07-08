@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.scss';
 import ImageDepartment from '../../assets/images/apartamento.jpg';
@@ -30,7 +31,9 @@ const Room = () => {
           <p className="priceAndButtom__price">
             Precio <small>cop</small>
           </p>
-          <button className="priceAndButtom__buttom">Ver más</button>
+          <Link to="/detail">
+            <button className="priceAndButtom__buttom">Ver más</button>
+          </Link>
         </div>
       </section>
     </article>

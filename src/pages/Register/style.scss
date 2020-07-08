@@ -63,6 +63,33 @@ input[type=submit] {
   margin-top: 16%;
 }
 
+.typeOfUser {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+input[type=checkbox] {
+  font-size: 16px;
+}
+
+.anfitrion {
+  margin-left: -50px;
+  &::before {
+    content: "Anfitrion";
+    margin-left: 20px;
+  }
+}
+
+.usuario {
+  margin-left: 100px;
+  &::before {
+    content: "Usuario";
+    margin-left: 20px;
+  }
+}
+
 // media queries
 
 @media screen and (max-width: 768px) {
@@ -87,5 +114,8 @@ input[type=submit] {
     h1 {
       font-size: $small-title;
     }
+  }
+    input[type=checkbox] {
+    font-size: 12px;
   }
 }
