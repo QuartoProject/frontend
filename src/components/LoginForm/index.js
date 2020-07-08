@@ -1,29 +1,46 @@
 import React, { useState } from 'react';
 
+const ENDPOINT = 'https://quarto-backend.herokuapp.com/api';
+import axios from 'axios';
+
 const Login = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useStater('');
+
+  function login({ username, password }) {
+    axios
+      .post(`${ENDPOINT}/login/`, {
+        username,
+        password,
+      })
+      .then((res) => {
+        console.log(res.json());
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    name === 'email' ? setEmail(value) : setPassword(value);
+    name === 'username' ? setUsername(value) : setPassword(value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    login({ username, password });
   };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="log form__name">
-        <label htmlFor="name">Email</label>
+        <label htmlFor="username">Username</label>
         <input
           className="input name"
-          type="email"
-          name="email"
-          id="email"
-          value={email}
+          type="text"
+          name="username"
+          value={username}
           onChange={handleChange}
         />
       </div>
