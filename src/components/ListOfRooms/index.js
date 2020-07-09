@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Context } from '../../context/RoomContext';
-
 import Room from '../Room';
 
 const ListOfRooms = ({ rooms }) => {
