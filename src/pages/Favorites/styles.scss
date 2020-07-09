@@ -38,32 +38,69 @@
   grid-column: 1 / 5;
   grid-row: 6 / 7;
 }
-.footer__mobile {
-  display: none;
-}
 
 // queries
 
 @media screen and (max-width: 768px) {
   .main {
-    display: grid;
-    grid-template-columns: 3% 1fr 3%;
-    grid-template-rows: 3% 5% 11.5% 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
   }
 
   .main__navbar {
-    grid-column: 2 / 3;
+    position: absolute;
+    right: 0;
+    left: 0;
+    padding: 4%;
+  }
+  .main__title {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    padding: 0 4%;
+    h1 {
+      margin-left: -1%;
+      font-weight: bold;
+      font-size: $tablet-title;
+    }
+    p {
+      margin-bottom: -10px;
+      font-size: $body-2;
+    }
   }
   .main__listOfRooms {
-    grid-column: 2/3;
+    position: absolute;
+    bottom: -1069px;
+    height: auto;
+    overflow-y: visible;
+    overflow: visible;
   }
   .main__footer {
-    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -117%;
+    z-index: 4;
   }
-  .footer__mobile {
-    display: block;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 425px) {
+  .main__title {
+    h1 {
+      font-size: $medium-title;
+    }
+    p {
+      font-size: $small;
+    }
+  }
+  .main__carrousel {
+    bottom: -35%;
+  }
+  .main__footer {
+    bottom: -50%;
   }
 }
