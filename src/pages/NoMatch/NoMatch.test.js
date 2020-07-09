@@ -19,7 +19,7 @@ describe('Test 404 page', () => {
         <NoMatch />
       </MemoryRouter>
     );
-    const imageAlt = screen.findAllByAltText(/Logo/i);
-    expect(imageAlt).toBeInTheDOM;
+    const imageAlt = screen.getByAltText(/Logo/i);
+    expect(imageAlt).toBeInTheDocument();
   });
 });
