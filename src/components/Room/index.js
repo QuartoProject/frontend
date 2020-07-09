@@ -6,7 +6,7 @@ import ImageDepartment from '../../assets/images/apartamento.jpg';
 import FavoriteEmpty from '../../assets/images/favorite-empty.svg';
 import MarioPhoto from '../../assets/images/mario-foto.jpg';
 
-const Room = () => {
+const Room = ({ id, nearest_places, price }) => {
   return (
     <article className="card">
       <figure className="card__image">
@@ -19,7 +19,7 @@ const Room = () => {
       </figure>
       <section className="card__description">
         <div className="profile">
-          <h1>Barrio</h1>
+          <h1>{nearest_places}</h1>
           <div className="profile__detail">
             <div className="profile__detail--photo">
               <img src={MarioPhoto} alt="Profile photo" />
@@ -29,9 +29,9 @@ const Room = () => {
         </div>
         <div className="priceAndButtom">
           <p className="priceAndButtom__price">
-            Precio <small>cop</small>
+            {price} <small>cop</small>
           </p>
-          <Link to="/detail">
+          <Link to={`/detail=${id}`}>
             <button className="priceAndButtom__buttom">Ver más</button>
           </Link>
         </div>
