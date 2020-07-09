@@ -12,7 +12,7 @@ describe('Test Login Page', () => {
       </MemoryRouter>
     );
 
-    expect(getByText('Iniciar sesión')).toBeInTheDOM();
+    expect(getByText('Iniciar sesión')).toBeInTheDocument();
   });
 
   test('Close image', () => {
@@ -22,6 +22,6 @@ describe('Test Login Page', () => {
       </MemoryRouter>
     );
     const imageAlt = screen.getByAltText(/exit/i);
-    expect(imageAlt).toBeInTheDOM();
+    expect(imageAlt).toBeInTheDocument();
   });
 });
