@@ -25,10 +25,6 @@ const Favoritos = () => {
         <section className="main__footer">
           <Footer />
         </section>
-
-        <section className="footer__mobile">
-          <Footer />
-        </section>
       </main>
     </>
   );
