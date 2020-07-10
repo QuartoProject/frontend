@@ -14,7 +14,7 @@ const Register = () => (
         <Link to="/">
           <img className="x" src={X} alt="exit" />
         </Link>
-        <h1>Regístrate</h1>
+        <h1 data-testid="title">Regístrate</h1>
         <RegisterForm />
       </section>
     </article>
