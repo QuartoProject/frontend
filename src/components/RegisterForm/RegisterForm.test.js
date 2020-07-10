@@ -4,6 +4,18 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import RegisterForm from './index';
 
 describe('Test RegisterForm Component', () => {
+  test('Name label', () => {
+    render(<RegisterForm />);
+    const inputName = screen.getByLabelText('name');
+    expect(inputName).toBeInTheDocument();
+  });
+
+  test('Lastname label', () => {
+    render(<RegisterForm />);
+    const inputLastname = screen.getByLabelText('lastname');
+    expect(inputLastname).toBeInTheDocument();
+  });
+
   test('Username label', () => {
     render(<RegisterForm />);
     const inputUsername = screen.getByLabelText('username');
@@ -20,6 +32,22 @@ describe('Test RegisterForm Component', () => {
     render(<RegisterForm />);
     const inputPassword = screen.getByLabelText('password');
     expect(inputPassword).toBeInTheDocument();
+  });
+
+  test('Name change when user white', () => {
+    render(<RegisterForm />);
+    const inputName = screen.getByLabelText('name');
+    expect(inputName.value).toBe('');
+    fireEvent.change(inputName, { target: { value: 'User name' } });
+    expect(inputName.value).toBe('User name');
+  });
+
+  test('Lastname change when user white', () => {
+    render(<RegisterForm />);
+    const inputLastname = screen.getByLabelText('lastname');
+    expect(inputLastname.value).toBe('');
+    fireEvent.change(inputLastname, { target: { value: 'User lastname' } });
+    expect(inputLastname.value).toBe('User lastname');
   });
 
   test('Username change when user white', () => {
