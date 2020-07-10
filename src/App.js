@@ -16,7 +16,7 @@ const App = () => {
       <Route path="/favorites" component={Favoritos} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
-      <Route path="/detail" component={Detail} />
+      <Route path="/detail/:id" component={Detail} />
       <Route path="*" component={NoMatch} />
     </Switch>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -11,13 +12,11 @@ import Wifi from '../../assets/images/wifi.svg';
 import './style.scss';
 
 const Detail = () => {
+  const { id } = useParams();
   return (
     <Context.Consumer>
-      {(prop) => {
-        const room = prop[0].map((info) => {
-          return info;
-        });
-        console.log(room);
+      {(rooms) => {
+        const ROOM_DETAIL = rooms.find((room) => room.id === parseInt(id));
         return (
           <main className="detail">
             <div className="detail__navbar">
@@ -63,7 +62,7 @@ const Detail = () => {
                     <div className="photo__container">
                       <img src={Mario} alt="foto" />
                     </div>
-                    <h5>Nombre</h5>
+                    <h5>{ROOM_DETAIL.id_user.name}</h5>
                   </div>
                   <div className="person__description">
                     <i>

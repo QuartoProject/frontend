@@ -10,10 +10,10 @@ import './style.scss';
 const Home = () => {
   return (
     <Context.Consumer>
-      {(data) => {
-        const rooms = data[0].map((info) => {
-          return info;
-        });
+      {(rooms) => {
+        // const rooms = data[0].map((info) => {
+        //   return info;
+        // });
         console.log(rooms);
         return (
           <main className="home">

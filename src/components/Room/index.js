@@ -7,15 +7,6 @@ import FavoriteEmpty from '../../assets/images/favorite-empty.svg';
 import MarioPhoto from '../../assets/images/mario-foto.jpg';
 
 const Room = ({ id, id_user, nearest_places, price }) => {
-  // console.log(id_user.picture);
-  // fetch(id_user.picture)
-  //   .then((res) => {
-  //     const response = res.blob;
-  //     return response;
-  //   })
-  //   .then((images) => {
-  //     console.log(images);
-  //   });
   return (
     <article className="card">
       <figure className="card__image">
@@ -42,7 +33,7 @@ const Room = ({ id, id_user, nearest_places, price }) => {
           <p className="priceAndButtom__price">
             {price} <small>cop</small>
           </p>
-          <Link to="/detail">
+          <Link to={`detail/${id}`}>
             <button className="priceAndButtom__buttom">Ver más</button>
           </Link>
         </div>

@@ -3,7 +3,7 @@ import Mock from '../mock.json';
 export const Context = createContext();
 
 const Provider = ({ children }) => {
-  const [rooms, setRooms] = useState([Mock]);
+  const [rooms, setRooms] = useState(Mock);
 
   // useEffect(() => {
   //   fetch('https://quarto-backend.herokuapp.com/room/')
