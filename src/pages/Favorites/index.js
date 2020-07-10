@@ -11,10 +11,10 @@ import './styles.scss';
 const Favoritos = () => {
   return (
     <Context.Consumer>
-      {(data) => {
-        const rooms = data[0].map((info) => {
-          return info;
-        });
+      {(rooms) => {
+        // const rooms = data[0].map((info) => {
+        //   return info;
+        // });
         // console.log(rooms);
         return (
           <>
