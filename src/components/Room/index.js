@@ -7,7 +7,7 @@ import FavoriteEmpty from '../../assets/images/favorite-empty.svg';
 import MarioPhoto from '../../assets/images/mario-foto.jpg';
 
 const Room = ({ id, id_user, nearest_places, price }) => {
-  console.log(id_user.picture);
+  // console.log(id_user.picture);
   // fetch(id_user.picture)
   //   .then((res) => {
   //     const response = res.blob;
