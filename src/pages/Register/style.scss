@@ -90,6 +90,13 @@ input[type=checkbox] {
   }
 }
 
+.handleError {
+  padding: 10px 0;
+  font-size: $body-1;
+  text-align: center;
+  color: red;
+}
+
 // media queries
 
 @media screen and (max-width: 768px) {
