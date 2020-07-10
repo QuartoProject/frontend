@@ -68,6 +68,7 @@ const Register = () => {
           className="input name"
           type="text"
           name="name"
+          aria-label="name"
           value={name}
           onChange={handleChange}
           required
@@ -79,6 +80,7 @@ const Register = () => {
           className="input name"
           type="text"
           name="lastname"
+          aria-label="lastname"
           value={lastname}
           onChange={handleChange}
           required
