@@ -40,6 +40,7 @@ const Login = () => {
           className="input name"
           type="text"
           name="username"
+          aria-label="username"
           value={username}
           onChange={handleChange}
           required
@@ -51,6 +52,7 @@ const Login = () => {
           className="input"
           type="password"
           name="password"
+          aria-label="password"
           value={password}
           onChange={handleChange}
           required
