@@ -1,15 +1,34 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Context } from '../../context/RoomContext';
+import { IconContext } from 'react-icons';
+import { MdBookmarkBorder, MdBookmark } from 'react-icons/md';
 
 import './style.scss';
 import FavoriteEmpty from '../../assets/images/favorite-empty.svg';
 
 const Room = ({ id, id_user, id_images, price }) => {
+  const [toggle, setToggle] = useState(true);
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
   return (
     <article className="card">
       <figure className="card__image">
-        <img className="card__image--icon" src={FavoriteEmpty} alt="Ícon" />
+        {toggle ? (
+          <a onClick={handleClick} className="card__image--icon" alt="Ícon">
+            <IconContext.Provider value={{ size: '34px', color: '#fff' }}>
+              <MdBookmarkBorder />
+            </IconContext.Provider>
+          </a>
+        ) : (
+          <a onClick={handleClick} className="card__image--icon" alt="Ícon">
+            <IconContext.Provider value={{ size: '34px', color: '#fff' }}>
+              <MdBookmark />
+            </IconContext.Provider>
+          </a>
+        )}
+
+        {/* <img className="card__image--icon" src={FavoriteEmpty} /> */}
         <img
           className="card__image--apartment"
           src={id_images.image_1}
