@@ -27,7 +27,10 @@ const Navbar = (prop) => {
           </figure>
         </Link>
         <Search />
-        <ul className={toggle ? 'navbar__navList' : 'navbar__navList2'}>
+        <ul
+          data-testid="nav-items"
+          className={toggle ? 'navbar__navList' : 'navbar__navList2'}
+        >
           <li>
             <Link
               to="/favorites"
