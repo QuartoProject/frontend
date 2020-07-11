@@ -4,24 +4,24 @@ import { IconContext } from 'react-icons';
 import { MdBookmarkBorder, MdBookmark } from 'react-icons/md';
 
 import './style.scss';
-import FavoriteEmpty from '../../assets/images/favorite-empty.svg';
 
 const Room = ({ id, id_user, id_images, price }) => {
   const [toggle, setToggle] = useState(true);
   const handleClick = () => {
     setToggle(!toggle);
+    console.log({ id_room: id, id_user: 1 });
   };
   return (
     <article className="card">
       <figure className="card__image">
         {toggle ? (
-          <a onClick={handleClick} className="card__image--icon" alt="Ícon">
+          <a onClick={handleClick} className="card__image--icon" alt="Icon">
             <IconContext.Provider value={{ size: '34px', color: '#fff' }}>
               <MdBookmarkBorder />
             </IconContext.Provider>
           </a>
         ) : (
-          <a onClick={handleClick} className="card__image--icon" alt="Ícon">
+          <a onClick={handleClick} className="card__image--icon" alt="Icon">
             <IconContext.Provider value={{ size: '34px', color: '#fff' }}>
               <MdBookmark />
             </IconContext.Provider>
@@ -37,7 +37,7 @@ const Room = ({ id, id_user, id_images, price }) => {
       </figure>
       <section className="card__description">
         <div className="profile">
-          <h1>{id_user.location}</h1>
+          <h1 datatestid="location">{id_user.location}</h1>
           <div className="profile__detail">
             <div className="profile__detail--photo">
               <img
@@ -45,13 +45,13 @@ const Room = ({ id, id_user, id_images, price }) => {
                 alt="Profile photo"
               />
             </div>
-            <p className="profile__detail--name">
+            <p datatestid="user-fullname" className="profile__detail--name">
               {id_user.name} {id_user.last_name}
             </p>
           </div>
         </div>
         <div className="priceAndButtom">
-          <p className="priceAndButtom__price">
+          <p datatestid="price" className="priceAndButtom__price">
             {price} <small>cop</small>
           </p>
           <Link to={`detail/${id}`}>

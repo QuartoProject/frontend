@@ -12,10 +12,6 @@ const Favoritos = () => {
   return (
     <Context.Consumer>
       {(rooms) => {
-        // const rooms = data[0].map((info) => {
-        //   return info;
-        // });
-        // console.log(rooms);
         return (
           <>
             <main className="main">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { MdRoom } from 'react-icons/md';
@@ -9,9 +9,7 @@ import ListOfIcons from '../../components/ListOfIcons';
 
 import './style.scss';
 
-const DetailData = (prop) => {
-  const { rooms } = prop;
-
+const DetailData = ({ rooms }) => {
   const {
     id_user,
     id_images,
@@ -27,7 +25,9 @@ const DetailData = (prop) => {
     tv,
     washing_machine,
   } = rooms;
-  const { name } = id_user;
+  const { name, phone, email } = id_user;
+
+  const [mainPhoto, setMainPhoto] = useState(id_images.image_1 || '');
 
   const PICTURES = [];
   for (let prop in id_images) {
@@ -45,23 +45,28 @@ const DetailData = (prop) => {
           <div className="photos__main">
             <img
               className="photos__main--image"
-              src={id_images.image_1}
-              alt=""
+              src={mainPhoto}
+              alt="Main Photo"
             />
           </div>
           <div className="photos__container">
             <div className="carrousel">
-              <ul>
-                {PICTURES.map((images) => {
-                  return (
-                    <li key={images}>
-                      <img
-                        className="caja"
-                        src={id_images[images]}
-                        alt="fotos"
-                      />
-                    </li>
-                  );
+              <ul data-testid="thumbnails">
+                {PICTURES.map((image) => {
+                  if (id_images[image] !== '') {
+                    return (
+                      <li
+                        key={image}
+                        onClick={() => setMainPhoto(id_images[image])}
+                      >
+                        <img
+                          className="caja"
+                          src={id_images[image]}
+                          alt="fotos"
+                        />
+                      </li>
+                    );
+                  }
                 })}
               </ul>
             </div>
@@ -79,12 +84,12 @@ const DetailData = (prop) => {
               {/* <img src="" alt="Icon place" /> */}
             </div>
             <div className="data__profile">
-              <h1>{id_user.location}</h1>
-              <p>{description}</p>
+              <h1 data-testid="location">{id_user.location}</h1>
+              <p data-testid="description">{description}</p>
               <br />
               <hr />
               <br />
-              <h2>
+              <h2 data-testid="price">
                 Precio
                 <strong>$</strong>
                 {price}
@@ -106,9 +111,9 @@ const DetailData = (prop) => {
             </div>
           </div>
           <div className="cards card__services">
-            <h1>Servicios</h1>
+            <h1 data-testid="services">Servicios</h1>
             <div className="services">
-              <ul>
+              <ul data-testid="services-icons">
                 <ListOfIcons
                   wifi={wifi}
                   closet={closet}
@@ -124,15 +129,16 @@ const DetailData = (prop) => {
             </div>
           </div>
           <div className="buttons">
-            <Link
-              to="https://wa.me/57$%7Btelefono%7D?text=Hola,%20me%20interesa%20la%20habitaci%C3%B3n%20que%20est%C3%A1s%20%alquilando"
+            <a
+              href={`https://wa.me/57${phone}?text=Me%20interesa%20el%20cuarto%20que%20estás%20arrendado`}
               target="_blank"
+              rel="noreferrer"
             >
               <button className="btn wa">Whatsapp</button>
-            </Link>
-            <Link to="mailto:betotoro0902@gmail.com" target="_blank">
+            </a>
+            <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
               <button className="btn email">Email</button>
-            </Link>
+            </a>
           </div>
         </section>
       </article>
