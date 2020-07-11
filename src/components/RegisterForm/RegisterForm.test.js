@@ -34,7 +34,7 @@ describe('Test RegisterForm Component', () => {
     expect(inputPassword).toBeInTheDocument();
   });
 
-  test('Name change when user white', () => {
+  test('Name change when user write', () => {
     render(<RegisterForm />);
     const inputName = screen.getByLabelText('name');
     expect(inputName.value).toBe('');
@@ -42,7 +42,7 @@ describe('Test RegisterForm Component', () => {
     expect(inputName.value).toBe('User name');
   });
 
-  test('Lastname change when user white', () => {
+  test('Lastname change when user write', () => {
     render(<RegisterForm />);
     const inputLastname = screen.getByLabelText('lastname');
     expect(inputLastname.value).toBe('');
@@ -50,7 +50,7 @@ describe('Test RegisterForm Component', () => {
     expect(inputLastname.value).toBe('User lastname');
   });
 
-  test('Username change when user white', () => {
+  test('Username change when user write', () => {
     render(<RegisterForm />);
     const inputUsername = screen.getByLabelText('username');
     expect(inputUsername.value).toBe('');
@@ -58,7 +58,7 @@ describe('Test RegisterForm Component', () => {
     expect(inputUsername.value).toBe('Testing...');
   });
 
-  test('Email change when user white', () => {
+  test('Email change when user write', () => {
     render(<RegisterForm />);
     const inputEmail = screen.getByLabelText('email');
     expect(inputEmail.value).toBe('');
@@ -66,7 +66,7 @@ describe('Test RegisterForm Component', () => {
     expect(inputEmail.value).toBe('email@gmail.com');
   });
 
-  test('Password change when user white', () => {
+  test('Password change when user write', () => {
     render(<RegisterForm />);
     const inputPassword = screen.getByLabelText('password');
     expect(inputPassword.value).toBe('');
