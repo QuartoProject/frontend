@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 import Footer from './index';
 describe('Test Navbar', () => {
-  it('it displays default items in left and right footer menus', () => {
+  test('it displays default items in left and right footer menus', () => {
     const { getByTestId } = render(
       <MemoryRouter>
         <Footer />

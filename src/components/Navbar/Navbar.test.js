@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router-dom';
 import Navbar from './index';
 
 describe('Test Navbar', () => {
-  it('it displays default nav items', () => {
+  test('it displays default nav items', () => {
     const { getByTestId } = render(
       <MemoryRouter>
         <Navbar />
