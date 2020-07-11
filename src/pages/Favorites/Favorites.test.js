@@ -13,5 +13,7 @@ describe('Favorites Test', () => {
     );
 
     expect(getByTestId('title')).toHaveTextContent('Favoritos');
+
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 });
