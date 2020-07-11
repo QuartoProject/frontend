@@ -3,8 +3,8 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Home from './index';
 
-describe('Test 404 page', () => {
-  test('No Match test', () => {
+describe('Test Home Page', () => {
+  test('Search title', () => {
     const { getByText } = render(
       <MemoryRouter>
         <Home />
