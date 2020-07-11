@@ -16,15 +16,15 @@ describe('Test LoginForm Component', () => {
     expect(inputPassword).toBeInTheDocument();
   });
 
-  test('Username change when user white', () => {
+  test('Username change when user write', () => {
     render(<LoginForm />);
     const inputUsername = screen.getByLabelText('username');
     expect(inputUsername.value).toBe('');
-    fireEvent.change(inputUsername, { target: { value: 'Testing...' } });
-    expect(inputUsername.value).toBe('Testing...');
+    fireEvent.change(inputUsername, { target: { value: 'username' } });
+    expect(inputUsername.value).toBe('username');
   });
 
-  test('Password change when user white', () => {
+  test('Password change when user write', () => {
     render(<LoginForm />);
     const inputPassword = screen.getByLabelText('password');
     expect(inputPassword.value).toBe('');
