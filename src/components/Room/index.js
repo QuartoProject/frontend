@@ -9,6 +9,7 @@ const Room = ({ id, id_user, id_images, price }) => {
   const [toggle, setToggle] = useState(true);
   const handleClick = () => {
     setToggle(!toggle);
+    console.log({ id_room: id, id_user: 1 });
   };
   return (
     <article className="card">
