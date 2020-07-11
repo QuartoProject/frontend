@@ -1,4 +1,0 @@
-<svg id="menu-hamburguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
-  <path id="Trazado_1" data-name="Trazado 1" d="M0,0H25V25H0Z" fill="none"/>
-  <path id="Trazado_2" data-name="Trazado 2" d="M3,18H22V16H3Zm0-5H22V11H3ZM3,6V8H22V6Z" transform="translate(0 0.5)" fill="#172a3a"/>
-</svg>
