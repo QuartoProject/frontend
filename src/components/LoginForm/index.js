@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const ENDPOINT = 'https://quarto-backend.herokuapp.com/api';
 import axios from 'axios';
@@ -6,7 +7,9 @@ import axios from 'axios';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  let history = useHistory();
 
   function login({ username, password }) {
     axios
@@ -16,9 +19,12 @@ const Login = () => {
       })
       .then((res) => {
         console.log(res.json());
+        setError(false);
+        history.push('/');
       })
       .catch((err) => {
-        console.error(err);
+        setError(true);
+        setErrorMessage('Fallo la autenticación, verifica tus datos.');
       });
   }
 
@@ -58,6 +64,7 @@ const Login = () => {
           required
         />
       </div>
+      <div className="handleError">{error && <h2>{errorMessage}</h2>}</div>
       <input type="submit" value="Inicia sesión" />
     </form>
   );
