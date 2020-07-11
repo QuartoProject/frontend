@@ -1,4 +1,10 @@
 import React from 'react';
+import { IconContext } from 'react-icons';
+import {
+  AiFillFacebook,
+  AiFillTwitterSquare,
+  AiFillLinkedin,
+} from 'react-icons/ai';
 
 import './style.scss';
 
@@ -18,13 +24,19 @@ const Footer = () => (
     <div className="footer__socials">
       <ul>
         <li>
-          <img src={faceIcon} alt="Facebook Icon" />
+          <IconContext.Provider value={{ size: '34px', color: '#4064AD' }}>
+            <AiFillFacebook />
+          </IconContext.Provider>
         </li>
         <li>
-          <img src={twitIcon} alt="Twitter Icon" />
+          <IconContext.Provider value={{ size: '34px', color: '#1C9DEB' }}>
+            <AiFillTwitterSquare />
+          </IconContext.Provider>
         </li>
         <li>
-          <img src={linkIcon} alt="LinkedIn Icon" />
+          <IconContext.Provider value={{ size: '34px', color: '#0075B0' }}>
+            <AiFillLinkedin />
+          </IconContext.Provider>
         </li>
       </ul>
     </div>

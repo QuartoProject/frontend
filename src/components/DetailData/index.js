@@ -1,17 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
-import { MdWifi, MdRoom } from 'react-icons/md';
+import { MdRoom } from 'react-icons/md';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import ListOfIcons from '../../components/ListOfIcons';
 
 import './style.scss';
 
 const DetailData = (prop) => {
   const { rooms } = prop;
 
-  const { id_user, id_images, description, price } = rooms;
+  const {
+    id_user,
+    id_images,
+    description,
+    price,
+    wifi,
+    closet,
+    pet,
+    kitchen,
+    smoke,
+    private_bath,
+    couple,
+    tv,
+    washing_machine,
+  } = rooms;
   const { name } = id_user;
 
   const PICTURES = [];
@@ -94,15 +109,17 @@ const DetailData = (prop) => {
             <h1>Servicios</h1>
             <div className="services">
               <ul>
-                {[1, 2, 3].map((ids) => {
-                  return (
-                    <li key={ids}>
-                      <MdWifi alt="Icon wifi" />
-                      {/* <img alt="Icon wifi" /> */}
-                      <p>Wifi</p>
-                    </li>
-                  );
-                })}
+                <ListOfIcons
+                  wifi={wifi}
+                  closet={closet}
+                  pet={pet}
+                  kitchen={kitchen}
+                  private_bath={private_bath}
+                  smoke={smoke}
+                  tv={tv}
+                  couple={couple}
+                  washing_machine={washing_machine}
+                />
               </ul>
             </div>
           </div>
