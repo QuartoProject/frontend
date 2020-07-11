@@ -6,23 +6,26 @@ import ImageDepartment from '../../assets/images/apartamento.jpg';
 import FavoriteEmpty from '../../assets/images/favorite-empty.svg';
 import MarioPhoto from '../../assets/images/mario-foto.jpg';
 
-const Room = ({ id, id_user, nearest_places, price }) => {
+const Room = ({ id, id_user, id_images, price }) => {
   return (
     <article className="card">
       <figure className="card__image">
         <img className="card__image--icon" src={FavoriteEmpty} alt="Ícon" />
         <img
           className="card__image--apartment"
-          src={ImageDepartment}
+          src={id_images.image_1}
           alt="Room image"
         />
       </figure>
       <section className="card__description">
         <div className="profile">
-          <h1>{nearest_places}</h1>
+          <h1>{id_user.location}</h1>
           <div className="profile__detail">
             <div className="profile__detail--photo">
-              <img src={MarioPhoto} alt="Profile photo" />
+              <img
+                src="https://thispersondoesnotexist.com/image"
+                alt="Profile photo"
+              />
             </div>
             <p className="profile__detail--name">
               {id_user.name} {id_user.last_name}

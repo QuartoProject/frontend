@@ -4,7 +4,7 @@ import { Context } from '../../context/RoomContext';
 
 import DetailData from '../../components/DetailData';
 
-import './style.scss';
+// import './style.scss';
 
 const Detail = () => {
   const { id } = useParams();

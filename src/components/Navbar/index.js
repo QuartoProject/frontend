@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Search from '../Search';
 
-import Logo from '../../assets/images/logoQuarto.svg';
+// import Logo from '../../assets/images/logoQuarto.svg';
 import HamburguerMenu from '../../assets/images/menu-hamburguer.svg';
 import HamburguerMenuBlack from '../../assets/images/menu-hamburguer-black.svg';
 import X from '../../assets/images/x.svg';
@@ -11,6 +11,7 @@ import X from '../../assets/images/x.svg';
 import './styles.scss';
 
 const Navbar = (prop) => {
+  const Logo = 'https://i.imgur.com/Qye9GB0.png';
   const COLOR_CHANGE = prop.changeColor;
   const ICON = COLOR_CHANGE ? HamburguerMenuBlack : HamburguerMenu;
   const [toggle, setToggle] = useState(true);

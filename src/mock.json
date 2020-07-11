@@ -20,7 +20,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Eco Plaza",
+    "nearest_places": "Suba",
     "mts2": "10mts2",
     "furniture": "Aenean lobortis tristique ante, et tempor libero rutrum sed. Quisque a semper felis. Pellentesque facilisis lorem nec maximus suscipit. In semper lorem a est sollicitudin, a dignissim lorem dignissim.",
     "private_bath": true,
@@ -58,7 +58,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Parque",
+    "nearest_places": "Parque la Colina",
     "mts2": "10mts2",
     "furniture": "",
     "private_bath": false,
@@ -96,7 +96,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Teatro",
+    "nearest_places": "Gaitán",
     "mts2": "10mts2",
     "furniture": "",
     "private_bath": true,
@@ -134,7 +134,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Centro comercial La Alameda",
+    "nearest_places": "Calera",
     "mts2": "10mts2",
     "furniture": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque magna augue, blandit lobortis sagittis eu, consequat sit amet libero. Vivamus dictum velit a leo congue, sed dignissim risus vulputate. Proin sed interdum neque. Praesent eleifend leo nec dui semper scelerisque.",
     "private_bath": true,
@@ -172,7 +172,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Biblioteca",
+    "nearest_places": "Villa del Prado",
     "mts2": "10mts2",
     "furniture": "",
     "private_bath": false,
@@ -210,7 +210,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Biblioteca",
+    "nearest_places": "Bosa",
     "mts2": "10mts2",
     "furniture": "",
     "private_bath": true,
@@ -248,7 +248,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Parque",
+    "nearest_places": "Rosales",
     "mts2": "10mts2",
     "furniture": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "private_bath": true,
@@ -286,7 +286,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Eco Plaza",
+    "nearest_places": "Quinta Camacho",
     "mts2": "10mts2",
     "furniture": "",
     "private_bath": true,
@@ -324,7 +324,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Biblioteca",
+    "nearest_places": "Mirandela",
     "mts2": "10mts2",
     "furniture": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque magna augue, blandit lobortis sagittis eu, consequat sit amet libero.",
     "private_bath": false,
@@ -362,7 +362,7 @@
       "image_8": ""
     },
     "price": 999999,
-    "nearest_places": "Centro comercial La Alameda",
+    "nearest_places": "Alcalá",
     "mts2": "10mts2",
     "furniture": "",
     "private_bath": true,

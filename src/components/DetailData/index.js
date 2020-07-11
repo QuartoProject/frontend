@@ -1,18 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { IconContext } from 'react-icons';
+import { MdWifi, MdRoom } from 'react-icons/md';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-import IconMap from '../../assets/images/map.svg';
-import Mario from '../../assets/images/mario-foto.jpg';
-import Wifi from '../../assets/services/wifi.svg';
+import './style.scss';
 
 const DetailData = (prop) => {
   const { rooms } = prop;
-  const { id, id_user } = rooms;
+
+  const { id_user, id_images, description, price } = rooms;
   const { name } = id_user;
-  console.log(id, name);
+
+  const PICTURES = [];
+  for (let prop in id_images) {
+    PICTURES.push(prop);
+  }
+  PICTURES.shift();
+
   return (
     <main className="detail">
       <div className="detail__navbar">
@@ -20,14 +27,24 @@ const DetailData = (prop) => {
       </div>
       <article className="detail__content">
         <section className="photos">
-          <div className="photos__main"></div>
+          <div className="photos__main">
+            <img
+              className="photos__main--image"
+              src={id_images.image_1}
+              alt=""
+            />
+          </div>
           <div className="photos__container">
             <div className="carrousel">
               <ul>
-                {[1, 2, 3, 4, 5, 6, 7].map((id) => {
+                {PICTURES.map((images) => {
                   return (
-                    <li key={id}>
-                      <div className="caja"></div>
+                    <li key={images}>
+                      <img
+                        className="caja"
+                        src={id_images[images]}
+                        alt="fotos"
+                      />
                     </li>
                   );
                 })}
@@ -38,34 +55,39 @@ const DetailData = (prop) => {
         <section className="description">
           <div className="cards card__location">
             <div className="icon">
-              <img src={IconMap} alt="Icon place" />
+              <IconContext.Provider value={{ size: '34px' }}>
+                <div>
+                  <MdRoom />
+                  {/* <FaFolder /> */}
+                </div>
+              </IconContext.Provider>
+              {/* <img src="" alt="Icon place" /> */}
             </div>
             <div className="data__profile">
-              <h1>título</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia reprehenderit praesentium nesciunt laudantium, fugiat
-                facere, neque consequatur
-              </p>
+              <h1>{id_user.location}</h1>
+              <p>{description}</p>
               <br />
               <hr />
               <br />
-              <p>descripción</p>
+              <h2>
+                Precio
+                <strong>$</strong>
+                {price}
+              </h2>
             </div>
           </div>
           <div className="cards card__profile">
             <div className="photo__person">
               <div className="photo__container">
-                <img src={Mario} alt="foto" />
+                <img
+                  src="https://thispersondoesnotexist.com/image"
+                  classalt="foto"
+                />
               </div>
               <h5>{name}</h5>
             </div>
             <div className="person__description">
-              <i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                necessitatibus, illum excepturi libero quod quos assumenda quasi
-                magni debitis! Facere beatae provident.
-              </i>
+              <i>{id_user.description}</i>
             </div>
           </div>
           <div className="cards card__services">
@@ -75,7 +97,8 @@ const DetailData = (prop) => {
                 {[1, 2, 3].map((ids) => {
                   return (
                     <li key={ids}>
-                      <img src={Wifi} alt="Icon wifi" />
+                      <MdWifi alt="Icon wifi" />
+                      {/* <img alt="Icon wifi" /> */}
                       <p>Wifi</p>
                     </li>
                   );
