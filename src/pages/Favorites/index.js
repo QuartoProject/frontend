@@ -28,7 +28,7 @@ const Favoritos = () => {
               </section>
 
               <section className="main__title">
-                <h1>Favoritos</h1>
+                <h1 data-testid="title">Favoritos</h1>
               </section>
 
               <section className="main__footer">

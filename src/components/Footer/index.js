@@ -15,14 +15,14 @@ import twitIcon from '../../assets/images/twitter.svg';
 const Footer = () => (
   <footer>
     <div className="footer__menu">
-      <ul>
+      <ul data-testid="left-menu">
         <li>&copy; 2020 Quarto. All rights reserved</li>
         <li>Privacidad</li>
         <li>Terminos y condiciones</li>
       </ul>
     </div>
     <div className="footer__socials">
-      <ul>
+      <ul data-testid="right-menu">
         <li>
           <IconContext.Provider value={{ size: '34px', color: '#4064AD' }}>
             <AiFillFacebook />
