@@ -21,7 +21,5 @@ describe('Test 404 page', () => {
     );
 
     expect(getByText('Bogotá')).toBeInTheDocument();
-
-    screen.debug();
   });
 });
