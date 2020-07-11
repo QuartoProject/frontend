@@ -1,37 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IconContext } from 'react-icons';
+import { MdBookmarkBorder, MdBookmark } from 'react-icons/md';
 
 import './style.scss';
-import ImageDepartment from '../../assets/images/apartamento.jpg';
 import FavoriteEmpty from '../../assets/images/favorite-empty.svg';
-import MarioPhoto from '../../assets/images/mario-foto.jpg';
 
-const Room = () => {
+const Room = ({ id, id_user, id_images, price }) => {
+  const [toggle, setToggle] = useState(true);
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
   return (
     <article className="card">
       <figure className="card__image">
-        <img className="card__image--icon" src={FavoriteEmpty} alt="Ícon" />
+        {toggle ? (
+          <a onClick={handleClick} className="card__image--icon" alt="Ícon">
+            <IconContext.Provider value={{ size: '34px', color: '#fff' }}>
+              <MdBookmarkBorder />
+            </IconContext.Provider>
+          </a>
+        ) : (
+          <a onClick={handleClick} className="card__image--icon" alt="Ícon">
+            <IconContext.Provider value={{ size: '34px', color: '#fff' }}>
+              <MdBookmark />
+            </IconContext.Provider>
+          </a>
+        )}
+
+        {/* <img className="card__image--icon" src={FavoriteEmpty} /> */}
         <img
           className="card__image--apartment"
-          src={ImageDepartment}
+          src={id_images.image_1}
           alt="Room image"
         />
       </figure>
       <section className="card__description">
         <div className="profile">
-          <h1>Barrio</h1>
+          <h1>{id_user.location}</h1>
           <div className="profile__detail">
             <div className="profile__detail--photo">
-              <img src={MarioPhoto} alt="Profile photo" />
+              <img
+                src="https://thispersondoesnotexist.com/image"
+                alt="Profile photo"
+              />
             </div>
-            <p className="profile__detail--name">Name Lastname</p>
+            <p className="profile__detail--name">
+              {id_user.name} {id_user.last_name}
+            </p>
           </div>
         </div>
         <div className="priceAndButtom">
           <p className="priceAndButtom__price">
-            Precio <small>cop</small>
+            {price} <small>cop</small>
           </p>
-          <Link to="/detail">
+          <Link to={`detail/${id}`}>
             <button className="priceAndButtom__buttom">Ver más</button>
           </Link>
         </div>

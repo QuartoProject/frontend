@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import { Context } from '../../context/RoomContext';
 import Room from '../Room';
 
 const ListOfRooms = () => {
-  const list = [1, 2, 3, 4];
-  return list.map((id) => <Room key={id} />);
+  const rooms = useContext(Context);
+  return rooms.map((room) => <Room key={room.id} {...room} />);
 };
 
 export default ListOfRooms;

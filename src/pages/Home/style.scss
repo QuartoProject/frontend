@@ -125,17 +125,18 @@
     border-radius: 22px 22px 0 0;
   }
   .home__carrousel {
-    position: absolute;
-    bottom: -1069px;
+    margin-top: 92%;
+    // position: absolute;
+    // bottom: -1069px;
     height: auto;
-    overflow-y: visible;
+    // overflow-y: visible;
     overflow: visible;
   }
     .home__footer {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: -117%;
+    // position: absolute;
+    // right: 0;
+    // left: 0;
+    // bottom: -117%;
     z-index: 4;
   }
 }
@@ -150,7 +151,8 @@
     }
   }
   .home__carrousel {
-    bottom: -35%;
+    // bottom: -35%;
+    margin-top: 173%;
   }
   .home__footer {
     bottom: -50%;

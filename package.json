@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "Frontend for Quarto Project",
-  "main": "index.js",  
+  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
@@ -27,6 +27,7 @@
     "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {

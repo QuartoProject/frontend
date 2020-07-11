@@ -21,8 +21,9 @@
   width: 30px;
   height: 20px;
   right: 6px;
-  font-size: 25px;
   z-index: 4;
+  font-size: 25px;
+  fill: $color-secondary;
   border-left: 1px solid $color-secondary;
   transform: translateY(-50%);
 }
