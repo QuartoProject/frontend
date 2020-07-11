@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IconContext } from 'react-icons';
+import { MdMenu, MdClear } from 'react-icons/md';
 
 import Search from '../Search';
-
-// import Logo from '../../assets/images/logoQuarto.svg';
-import HamburguerMenu from '../../assets/images/menu-hamburguer.svg';
-import HamburguerMenuBlack from '../../assets/images/menu-hamburguer-black.svg';
-import X from '../../assets/images/x.svg';
 
 import './styles.scss';
 
 const Navbar = (prop) => {
   const Logo = 'https://i.imgur.com/Qye9GB0.png';
   const COLOR_CHANGE = prop.changeColor;
-  const ICON = COLOR_CHANGE ? HamburguerMenuBlack : HamburguerMenu;
   const [toggle, setToggle] = useState(true);
   const handleClick = () => {
     setToggle(!toggle);
   };
-  const MENU = toggle ? ICON : X;
   return (
     <header>
       <nav className="navbar">
@@ -51,12 +46,31 @@ const Navbar = (prop) => {
             </Link>
           </li>
         </ul>
-        <img
-          className={toggle ? 'navbar__hamburguerMenu' : 'fixed'}
-          src={MENU}
-          alt="Hamburguer menu"
-          onClick={handleClick}
-        />
+        {COLOR_CHANGE ? (
+          <a onClick={handleClick}>
+            <IconContext.Provider
+              value={{
+                className: 'navbar__hamburguerMenu',
+                size: '40px',
+                color: '#000',
+              }}
+            >
+              {toggle ? <MdMenu /> : <MdClear />}
+            </IconContext.Provider>
+          </a>
+        ) : (
+          <a className="navbar__hamburguerMenu" onClick={handleClick}>
+            <IconContext.Provider
+              value={{
+                // className: 'navbar__hamburguerMenu',
+                size: '40px',
+                color: '#fff',
+              }}
+            >
+              {toggle ? <MdMenu /> : <MdClear />}
+            </IconContext.Provider>
+          </a>
+        )}
         <div className={toggle ? 'hidden' : 'navbar__background'}></div>
       </nav>
     </header>
