@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import { Context } from '../../context/RoomContext';
 import Room from '../Room';
 
-const ListOfRooms = ({ rooms }) => {
-  // const list = [1, 2, 3, 4];
+const ListOfRooms = () => {
+  const rooms = useContext(Context);
   return rooms.map((room) => <Room key={room.id} {...room} />);
 };
 

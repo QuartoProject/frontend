@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../../context/RoomContext';
 
 import './style.scss';
-import ImageDepartment from '../../assets/images/apartamento.jpg';
 import FavoriteEmpty from '../../assets/images/favorite-empty.svg';
-import MarioPhoto from '../../assets/images/mario-foto.jpg';
 
 const Room = ({ id, id_user, id_images, price }) => {
   return (
