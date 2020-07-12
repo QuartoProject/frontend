@@ -31,8 +31,8 @@ npm start
 * Miguel Martelo [@MigueMartelo31](https://twitter.com/MigueMartelo31)
 * Mario Restrepo [@maoacr](https://twitter.com/maoacr)
 * Beto Toro [@BetoToro_dev](https://twitter.com/BetoToro_dev)
-* Anthony Luque [Red]()
-* Jorge Salgado [red]()
+* Anthony Luque [TonyLuque](https://github.com/TonyLuque)
+* Jorge Salgado [JasoSalgado](https://github.com/JasoSalgado)
 
 ### ¡Thanks for whatching our work!🙏🏼
 Feel free of contribute, and keep ot touch 😊
