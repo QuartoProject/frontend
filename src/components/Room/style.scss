@@ -7,7 +7,7 @@
   left: $space-1;
   display: flex;
   width: 92%;
-  height: 29%;
+  height: 35%;
   margin-bottom: 3%;
   border-radius: 22px;
   background-color: $color-white-text;
@@ -77,7 +77,7 @@
 @media screen and (max-width: 768px) {
   .card {
     width: 95%;
-    height: 10%;
+    height: 7%;
     left: 1.8%;
     margin-bottom: 5%;
     box-shadow: 5px 0 10px rgba(0,0,0,0.25);
