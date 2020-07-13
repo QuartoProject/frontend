@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../../context/RoomContext';
 
 import Navbar from '../../components/Navbar';
 import ListOfRooms from '../../components/ListOfRooms';
@@ -7,6 +8,7 @@ import Footer from '../../components/Footer';
 import './style.scss';
 
 const Home = () => {
+  const rooms = useContext(Context);
   return (
     <main className="home">
       <div className="home__transition"></div>
@@ -19,7 +21,7 @@ const Home = () => {
       </section>
       <div className="carrousel__background"></div>
       <section className="home__carrousel">
-        <ListOfRooms />
+        <ListOfRooms rooms={rooms} />
       </section>
       <section className="home__footer">
         <Footer />
