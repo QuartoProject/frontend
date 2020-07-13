@@ -2,7 +2,6 @@ import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
 import Logo from '../../assets/images/logoQuarto.svg';
-
 import './styles.scss';
 
 const NoMatch = () => {
