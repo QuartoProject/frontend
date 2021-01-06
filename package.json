@@ -24,7 +24,7 @@
   },
   "homepage": "https://quartoproject.github.io/frontend/",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
